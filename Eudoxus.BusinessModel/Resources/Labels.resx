@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="enReporterType_Student" xml:space="preserve">
+    <value>Φοιτητής</value>
+  </data>
+  <data name="enReporterType_Secretary" xml:space="preserve">
+    <value>Γραμματεία</value>
+  </data>
+  <data name="enReporterType_Publisher" xml:space="preserve">
+    <value>Εκδότης</value>
+  </data>
+  <data name="enReporterType_Unknown" xml:space="preserve">
+    <value>Χρήστης χωρίς λογαριασμό</value>
+  </data>
+  <data name="enReportStatus_Answered" xml:space="preserve">
+    <value>Έχει απαντηθεί</value>
+  </data>
+  <data name="enReportStatus_Closed" xml:space="preserve">
+    <value>Έχει κλείσει</value>
+  </data>
+  <data name="enReportStatus_Pending" xml:space="preserve">
+    <value>Εκκρεμεί</value>
+  </data>
+  <data name="enReportStatus_Answered_Icon" xml:space="preserve">
+    <value>&lt;img src='/_img/iconUserComment.png' title='Έχει απαντηθεί' align='absmiddle' hspace='5'/&gt;</value>
+  </data>
+  <data name="enReportStatus_Closed_Icon" xml:space="preserve">
+    <value>&lt;img src='/_img/iconAcceptAll.png' title='Έχει κλείσει' align='absmiddle' hspace='5'/&gt;</value>
+  </data>
+  <data name="enReportStatus_Pending_Icon" xml:space="preserve">
+    <value>&lt;img src='/_img/iconPending.png' title='Εκκρεμεί' align='absmiddle' hspace='5'/&gt;</value>
+  </data>
+  <data name="enPublisherType_SelfPublisher" xml:space="preserve">
+    <value>Φυσικό Πρόσωπο (αυτοεκδότης)</value>
+  </data>
+  <data name="enPublisherType_LegalPerson" xml:space="preserve">
+    <value>Νομικό Πρόσωπο</value>
+  </data>
+  <data name="enReporterType_DistributionPoint" xml:space="preserve">
+    <value>Σημείο Διανομής</value>
+  </data>
+  <data name="enReporterType_Online" xml:space="preserve">
+    <value>Online Χρήστης</value>
+  </data>
+  <data name="enIdentificationType_ID" xml:space="preserve">
+    <value>Αστυνομική Ταυτότητα</value>
+  </data>
+  <data name="enIdentificationType_Passport" xml:space="preserve">
+    <value>Διαβατήριο</value>
+  </data>
+  <data name="enDispatchType_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="enDispatchType_Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="enReporterType_Professor" xml:space="preserve">
+    <value>Καθηγητής</value>
+  </data>
+  <data name="enCallType_Incoming" xml:space="preserve">
+    <value>Εισερχόμενη</value>
+  </data>
+  <data name="enCallType_Outgoing" xml:space="preserve">
+    <value>Εξερχόμενη</value>
+  </data>
+  <data name="enRepresentativeType_President" xml:space="preserve">
+    <value>Πρόεδρος Τμήματος</value>
+  </data>
+  <data name="enRepresentativeType_Representative" xml:space="preserve">
+    <value>Προϊστάμενος Γραμματείας</value>
+  </data>
+  <data name="enVerificationStatus_CannotBeVerified" xml:space="preserve">
+    <value>Δεν μπορεί να πιστοποιηθεί</value>
+  </data>
+  <data name="enVerificationStatus_NotVerified" xml:space="preserve">
+    <value>Μη πιστοποιημένος</value>
+  </data>
+  <data name="enVerificationStatus_Verified" xml:space="preserve">
+    <value>Πιστοποιημένος</value>
+  </data>
+  <data name="enPublisherType_EbookPublisher" xml:space="preserve">
+    <value>Διαθέτης Δωρεάν Ηλεκτρονικών Βοηθημάτων και Σημειώσεων</value>
+  </data>
+  <data name="enReporterType_PublicationsOffice" xml:space="preserve">
+    <value>Γραφείο Διδακτικών Συγγραμμάτων</value>
+  </data>
+  <data name="enDirectorType_Chancellor" xml:space="preserve">
+    <value>Πρύτανης</value>
+  </data>
+  <data name="enDirectorType_ViceChancellor" xml:space="preserve">
+    <value>Αντιπρύτανης</value>
+  </data>
+  <data name="enReporterType_DataCenter" xml:space="preserve">
+    <value>Γραφείο Μηχανογράφησης</value>
+  </data>
+  <data name="enHandlerStatus_Closed" xml:space="preserve">
+    <value>Έχει κλείσει</value>
+  </data>
+  <data name="enHandlerStatus_NotHandledBySupervisor" xml:space="preserve">
+    <value>Δεν χρειάζεται επικοινωνία</value>
+  </data>
+  <data name="enHandlerStatus_Pending" xml:space="preserve">
+    <value>Εκκρεμεί</value>
+  </data>
+  <data name="enHandlerType_Helpdesk" xml:space="preserve">
+    <value>Γραφείο Αρωγής</value>
+  </data>
+  <data name="enHandlerType_Supervisor" xml:space="preserve">
+    <value>Ομάδα Παρακολούθησης</value>
+  </data>
+  <data name="enReporterType_Library" xml:space="preserve">
+    <value>Βιβλιοθήκη</value>
+  </data>
+  <data name="enInstitutionType_AEI" xml:space="preserve">
+    <value>Α.Ε.Ι.</value>
+  </data>
+  <data name="enInstitutionType_TEI" xml:space="preserve">
+    <value>Τ.Ε.Ι.</value>
+  </data>
+  <data name="enDistributionPointType_Institution" xml:space="preserve">
+    <value>Σημείο Διανομής Ιδρύματος</value>
+  </data>
+  <data name="enDistributionPointType_Store" xml:space="preserve">
+    <value>Απλό Σημείο Διανομής</value>
+  </data>
+  <data name="enReporterType_BookSupplier" xml:space="preserve">
+    <value>Υπεύθυνος Παραγγελίας Βιβλίων</value>
+  </data>
+  <data name="enCertifierType_AEIPresident" xml:space="preserve">
+    <value>Πρύτανης (Πανεπιστήμια)</value>
+  </data>
+  <data name="enCertifierType_TEIPresident" xml:space="preserve">
+    <value>Πρόεδρος (ΤΕΙ)</value>
+  </data>
+  <data name="enReporterType_PricingCommittee" xml:space="preserve">
+    <value>Επιτροπή Κοστολόγησης</value>
+  </data>
+  <data name="enMinistryAuthorization_Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="enMinistryAuthorization_None" xml:space="preserve">
+    <value>Καμία</value>
+  </data>
+  <data name="enMinistryAuthorization_ReadOnly" xml:space="preserve">
+    <value>Read-Only</value>
+  </data>
+  <data name="enReporterType_MinistryPayments" xml:space="preserve">
+    <value>Υπουργείο - Πληρωμές</value>
+  </data>
+</root>

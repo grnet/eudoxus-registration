@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode title="Γενικά Στοιχεία" roles="SystemAdministrator, Reports, SuperReports">
+        <siteMapNode title="Γενικά Στοιχεία" url="~/Reports/Default.aspx" roles="SystemAdministrator, Reports, SuperReports"/>
+        <siteMapNode title="Εκδότες" roles="SystemAdministrator, Reports, SuperReports">
+            <siteMapNode title="Συνολικές Εγγραφές" url="~/Reports/ViewRegisteredPublishers.aspx"></siteMapNode>
+            <siteMapNode title="Εγγραφές ανά Ημέρα" url="~/Reports/PublisherRegistrationsByDay.aspx"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Γραμματείες" roles="SystemAdministrator, Reports, SuperReports">
+            <siteMapNode title="Συνολικές Εγγραφές" url="~/Reports/ViewRegisteredSecretaries.aspx"></siteMapNode>
+            <siteMapNode title="Εγγραφές ανά Ημέρα" url="~/Reports/SecretaryRegistrationsByDay.aspx"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Γραφεία Διδακτικών Συγγραμμάτων" roles="SystemAdministrator, Reports, SuperReports">
+            <siteMapNode title="Συνολικές Εγγραφές" url="~/Reports/ViewRegisteredPublicationsOffices.aspx"></siteMapNode>
+            <siteMapNode title="Εγγραφές ανά Ημέρα" url="~/Reports/PublicationsOfficeRegistrationsByDay.aspx"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Γραφεία Μηχανογράφησης" roles="SystemAdministrator, Reports, SuperReports">
+            <siteMapNode title="Συνολικές Εγγραφές" url="~/Reports/ViewRegisteredDataCenters.aspx"></siteMapNode>
+            <siteMapNode title="Εγγραφές ανά Ημέρα" url="~/Reports/DataCenterRegistrationsByDay.aspx"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Βιβλιοθήκες" roles="SystemAdministrator, Reports, SuperReports">
+            <siteMapNode title="Συνολικές Εγγραφές" url="~/Reports/ViewRegisteredLibraries.aspx"></siteMapNode>
+            <siteMapNode title="Εγγραφές ανά Ημέρα" url="~/Reports/LibraryRegistrationsByDay.aspx"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Σημεία Διανομής" roles="SystemAdministrator, Reports, SuperReports">
+            <siteMapNode title="Συνολικές Εγγραφές" url="~/Reports/ViewRegisteredDistributionPoints.aspx"></siteMapNode>
+            <siteMapNode title="Εγγραφές ανά Ημέρα" url="~/Reports/DistributionPointRegistrationsByDay.aspx"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Υπεύθυνοι Παραγγελίας Βιβλίων" roles="SystemAdministrator, Reports, SuperReports">
+            <siteMapNode title="Συνολικές Εγγραφές" url="~/Reports/ViewRegisteredBookSuppliers.aspx"></siteMapNode>
+            <siteMapNode title="Εγγραφές ανά Ημέρα" url="~/Reports/BookSupplierRegistrationsByDay.aspx"></siteMapNode>
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

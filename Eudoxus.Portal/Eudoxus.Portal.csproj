@@ -1,0 +1,2343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E74C1E49-7737-48E8-B438-E1C126EAD31C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eudoxus.Portal</RootNamespace>
+    <AssemblyName>Eudoxus.Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ifestion|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\HelpDesk.Portal.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Data.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.2">
+      <HintPath>..\lib\DevExpress.Utils.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Web.ASPxEditors.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Web.ASPxGridView.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v9.2.Export">
+      <HintPath>..\lib\DevExpress.Web.ASPxGridView.v9.2.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v9.2">
+      <HintPath>..\lib\DevExpress.Web.ASPxHtmlEditor.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Web.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.2">
+      <HintPath>..\lib\DevExpress.XtraPrinting.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamite">
+      <HintPath>..\lib\Dynamite.dll</HintPath>
+    </Reference>
+    <Reference Include="Imis.Domain">
+      <HintPath>..\lib\Imis.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Imis.Domain.EF">
+      <HintPath>..\lib\Imis.Domain.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Imis.Web.Administration">
+      <HintPath>..\lib\Imis.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Imis.Web.Controls">
+      <HintPath>..\lib\Imis.Web.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Lanap.BotDetect, Version=2.0.13.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Lanap.BotDetect.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebPageSecurity">
+      <HintPath>..\lib\WebPageSecurity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddAdminUser.aspx" />
+    <Content Include="Admin\AdminUsers.aspx" />
+    <Content Include="Admin\UpdateAcademics.aspx" />
+    <Content Include="Admin\EditAdminUser.aspx" />
+    <Content Include="Admin\SendMessageToSecretaries.aspx" />
+    <Content Include="Admin\SendPublishersForPayment.aspx" />
+    <Content Include="Admin\SendUpdatesToService.aspx" />
+    <Content Include="Admin\ViewQueueEntries.aspx" />
+    <Content Include="Common\BookSupplierRegistration.aspx" />
+    <Content Include="Common\ChangeDefaultPassword.aspx" />
+    <Content Include="Common\DataCenterRegistration.aspx" />
+    <Content Include="Common\DistributionPointRegistration.aspx" />
+    <Content Include="Common\EbookPublisherRegistration.aspx" />
+    <Content Include="Common\ForeignPublisherRegistration.aspx" />
+    <Content Include="Common\LibraryRegistration.aspx" />
+    <Content Include="Common\MinistryPaymentsUserRegistration.aspx" />
+    <Content Include="Common\PricingCommitteeRegistration.aspx" />
+    <Content Include="Common\PublicationsOfficeRegistration.aspx" />
+    <Content Include="Common\SendActivationEmail.aspx" />
+    <Content Include="Helpdesk\AddHelpdeskUser.aspx" />
+    <Content Include="Helpdesk\EditBookSupplier.aspx" />
+    <Content Include="Helpdesk\EditDataCenter.aspx" />
+    <Content Include="Helpdesk\EditDistributionPoint.aspx" />
+    <Content Include="Helpdesk\EditHelpdeskUser.aspx" />
+    <Content Include="Helpdesk\EditIncidentReportHandler.aspx" />
+    <Content Include="Helpdesk\EditLibrary.aspx" />
+    <Content Include="Helpdesk\EditMinistryPaymentsUser.aspx" />
+    <Content Include="Helpdesk\EditPricingCommittee.aspx" />
+    <Content Include="Helpdesk\EditPublicationsOffice.aspx" />
+    <Content Include="Helpdesk\HelpdeskAdministration.aspx" />
+    <Content Include="Helpdesk\HelpdeskUsers.aspx" />
+    <Content Include="Helpdesk\SearchLessonReports.aspx" />
+    <Content Include="Helpdesk\SearchSupervisorReports.aspx" />
+    <Content Include="Helpdesk\UserControls\IncidentReportHandlerInput.ascx" />
+    <Content Include="Helpdesk\VerifyBookSupplier.aspx" />
+    <Content Include="Helpdesk\VerifyBookSuppliers.aspx" />
+    <Content Include="Helpdesk\VerifyDataCenter.aspx" />
+    <Content Include="Helpdesk\VerifyDataCenters.aspx" />
+    <Content Include="Helpdesk\VerifyDistributionPoint.aspx" />
+    <Content Include="Helpdesk\VerifyDistributionPoints.aspx" />
+    <Content Include="Helpdesk\VerifyLibraries.aspx" />
+    <Content Include="Helpdesk\VerifyLibrary.aspx" />
+    <Content Include="Helpdesk\VerifyMinistryPaymentsUser.aspx" />
+    <Content Include="Helpdesk\VerifyMinistryPaymentsUsers.aspx" />
+    <Content Include="Helpdesk\VerifyPricingCommittee.aspx" />
+    <Content Include="Helpdesk\VerifyPricingCommittees.aspx" />
+    <Content Include="Helpdesk\VerifyPublicationsOffice.aspx" />
+    <Content Include="Helpdesk\VerifyPublicationsOffices.aspx" />
+    <Content Include="Helpdesk\ViewReporterReports.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Helpdesk\EditAcademicDetails.aspx" />
+    <Content Include="Helpdesk\EditSecretary.aspx" />
+    <Content Include="Helpdesk\NonRegisteredAcademics.aspx" />
+    <Content Include="Helpdesk\UserControls\AcademicDetailInput.ascx" />
+    <Content Include="Helpdesk\UserControls\IncidentReportsGridview.ascx" />
+    <Content Include="Helpdesk\VerifySecretaries.aspx" />
+    <Content Include="Helpdesk\VerifySecretary.aspx" />
+    <Content Include="Reports\BookSupplierDetailsPopup.aspx" />
+    <Content Include="Reports\BookSupplierRegistrationsByDay.aspx" />
+    <Content Include="Reports\DataCenterDetailsPopup.aspx" />
+    <Content Include="Reports\DataCenterRegistrationsByDay.aspx" />
+    <Content Include="Reports\Default.aspx" />
+    <Content Include="Reports\DistributionPointDetailsPopup.aspx" />
+    <Content Include="Reports\DistributionPointRegistrationsByDay.aspx" />
+    <Content Include="Reports\LibraryDetailsPopup.aspx" />
+    <Content Include="Reports\LibraryRegistrationsByDay.aspx" />
+    <Content Include="Reports\PublicationsOfficeDetailsPopup.aspx" />
+    <Content Include="Reports\PublicationsOfficeRegistrationsByDay.aspx" />
+    <Content Include="Reports\PublisherRegistrationsByDay.aspx" />
+    <Content Include="Reports\RegisteredPublishersDetails.aspx" />
+    <Content Include="Reports\SecretaryDetailsPopup.aspx" />
+    <Content Include="Reports\SecretaryRegistrationsByDay.aspx" />
+    <Content Include="Reports\UserControls\BookSupplierDetailsGridView.ascx" />
+    <Content Include="Reports\UserControls\DataCenterDetailsGridView.ascx" />
+    <Content Include="Reports\UserControls\DistributionPointDetailsGridView.ascx" />
+    <Content Include="Reports\UserControls\LibraryDetailsGridView.ascx" />
+    <Content Include="Reports\UserControls\PublicationsOfficeDetailsGridView.ascx" />
+    <Content Include="Reports\UserControls\PublisherDetailsGridView.ascx" />
+    <Content Include="Reports\UserControls\RegisteredPublishersDetails.ascx" />
+    <Content Include="Reports\UserControls\SecretaryDetailsGridView.ascx" />
+    <Content Include="Reports\ViewRegisteredBookSuppliers.aspx" />
+    <Content Include="Reports\ViewRegisteredDataCenters.aspx" />
+    <Content Include="Reports\ViewRegisteredDistributionPoints.aspx" />
+    <Content Include="Reports\ViewRegisteredLibraries.aspx" />
+    <Content Include="Reports\ViewRegisteredPublicationsOffices.aspx" />
+    <Content Include="Reports\ViewRegisteredPublishers.aspx" />
+    <Content Include="Reports\ViewRegisteredSecretaries.aspx" />
+    <Content Include="Secure\BookSuppliers\BookSupplierDetails.aspx" />
+    <Content Include="Secure\BookSuppliers\ContactForm.aspx" />
+    <Content Include="Secure\BookSuppliers\Default.aspx" />
+    <Content Include="Secure\BookSuppliers\HelpdeskContact.aspx" />
+    <Content Include="Secure\BookSuppliers\PrintBookSupplierCertification.aspx" />
+    <Content Include="Secure\DataCenters\ContactForm.aspx" />
+    <Content Include="Secure\DataCenters\DataCenterDetails.aspx" />
+    <Content Include="Secure\DataCenters\Default.aspx" />
+    <Content Include="Secure\DataCenters\HelpdeskContact.aspx" />
+    <Content Include="Secure\DataCenters\PrintDataCenterCertification.aspx" />
+    <Content Include="Secure\DistributionPoints\ContactForm.aspx" />
+    <Content Include="Secure\DistributionPoints\Default.aspx" />
+    <Content Include="Secure\DistributionPoints\DistributionPointDetails.aspx" />
+    <Content Include="Secure\DistributionPoints\HelpdeskContact.aspx" />
+    <Content Include="Secure\DistributionPoints\PrintDistributionPointCertification.aspx" />
+    <Content Include="Secure\Libraries\ContactForm.aspx" />
+    <Content Include="Secure\Libraries\Default.aspx" />
+    <Content Include="Secure\Libraries\DistributionPointCreation.aspx" />
+    <Content Include="Secure\Libraries\HelpdeskContact.aspx" />
+    <Content Include="Secure\Libraries\LibraryDetails.aspx" />
+    <Content Include="Secure\Libraries\PrintLibraryCertification.aspx" />
+    <Content Include="Secure\MinistryPayments\ContactForm.aspx" />
+    <Content Include="Secure\MinistryPayments\Default.aspx" />
+    <Content Include="Secure\MinistryPayments\HelpdeskContact.aspx" />
+    <Content Include="Secure\MinistryPayments\MinistryPaymentsUserDetails.aspx" />
+    <Content Include="Secure\PricingCommittees\ContactForm.aspx" />
+    <Content Include="Secure\PricingCommittees\Default.aspx" />
+    <Content Include="Secure\PricingCommittees\HelpdeskContact.aspx" />
+    <Content Include="Secure\PricingCommittees\PricingCommitteeDetails.aspx" />
+    <Content Include="Secure\PublicationsOffices\ContactForm.aspx" />
+    <Content Include="Secure\PublicationsOffices\Default.aspx" />
+    <Content Include="Secure\PublicationsOffices\HelpdeskContact.aspx" />
+    <Content Include="Secure\PublicationsOffices\PrintPublicationsOfficeCertification.aspx" />
+    <Content Include="Secure\PublicationsOffices\PublicationsOfficeDetails.aspx" />
+    <Content Include="Secure\Secretaries\ContactForm.aspx" />
+    <Content Include="Secure\Secretaries\DistributionPointCreation.aspx" />
+    <Content Include="Secure\Secretaries\HelpdeskContact.aspx" />
+    <Content Include="UserControls\BookSupplierInput.ascx" />
+    <Content Include="UserControls\DataCenterInput.ascx" />
+    <Content Include="UserControls\DistributionPointInput.ascx" />
+    <Content Include="UserControls\HelpdeskUserInput.ascx" />
+    <Content Include="UserControls\InstitutionDistributionPointInput.ascx" />
+    <Content Include="UserControls\MinistryPaymentsUserInput.ascx" />
+    <Content Include="UserControls\PricingCommitteeInput.ascx" />
+    <Content Include="UserControls\StoreDistributionPointInput.ascx" />
+    <Content Include="UserControls\EbookPublisherInput.ascx" />
+    <Content Include="UserControls\EmailForm.ascx" />
+    <Content Include="UserControls\ForeignLegalPersonInput.ascx" />
+    <Content Include="UserControls\LibraryInput.ascx" />
+    <Content Include="UserControls\PublicationsOfficeInput.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddAdminUser.aspx.cs">
+      <DependentUpon>AddAdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddAdminUser.aspx.designer.cs">
+      <DependentUpon>AddAdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminUsers.aspx.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminUsers.aspx.designer.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateAcademics.aspx.cs">
+      <DependentUpon>UpdateAcademics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpdateAcademics.aspx.designer.cs">
+      <DependentUpon>UpdateAcademics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateIncidentType.aspx.cs">
+      <DependentUpon>CreateIncidentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateIncidentType.aspx.designer.cs">
+      <DependentUpon>CreateIncidentType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditAdminUser.aspx.cs">
+      <DependentUpon>EditAdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditAdminUser.aspx.designer.cs">
+      <DependentUpon>EditAdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditIncidentType.aspx.cs">
+      <DependentUpon>EditIncidentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditIncidentType.aspx.designer.cs">
+      <DependentUpon>EditIncidentType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IncidentTypeManagement.aspx.cs">
+      <DependentUpon>IncidentTypeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IncidentTypeManagement.aspx.designer.cs">
+      <DependentUpon>IncidentTypeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LoginAsUser.aspx.cs">
+      <DependentUpon>LoginAsUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LoginAsUser.aspx.designer.cs">
+      <DependentUpon>LoginAsUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SendMessageToSecretaries.aspx.cs">
+      <DependentUpon>SendMessageToSecretaries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SendMessageToSecretaries.aspx.designer.cs">
+      <DependentUpon>SendMessageToSecretaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SendPublishersForPayment.aspx.cs">
+      <DependentUpon>SendPublishersForPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SendPublishersForPayment.aspx.designer.cs">
+      <DependentUpon>SendPublishersForPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SendUpdatesToService.aspx.cs">
+      <DependentUpon>SendUpdatesToService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SendUpdatesToService.aspx.designer.cs">
+      <DependentUpon>SendUpdatesToService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserControls\IncidentTypeInput.ascx.cs">
+      <DependentUpon>IncidentTypeInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControls\IncidentTypeInput.ascx.designer.cs">
+      <DependentUpon>IncidentTypeInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewQueueEntries.aspx.cs">
+      <DependentUpon>ViewQueueEntries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewQueueEntries.aspx.designer.cs">
+      <DependentUpon>ViewQueueEntries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ActivateUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActivateUser.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\BookSupplierInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookSupplierInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\DataCenterInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataCenterInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\DistributionPointInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DistributionPointInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EbookPublisherInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EbookPublisherInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LegalPersonInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegalPersonInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LibraryInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MinistryPaymentsUserInput.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MinistryPaymentsUserInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\PricingCommitteeInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PricingCommitteeInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\PublicationsOfficeInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PublicationsOfficeInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RegistrationInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SecretaryInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecretaryInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SelfPublisherInput.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelfPublisherInput.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\Browse.Master.cs">
+      <DependentUpon>Browse.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Browse\Browse.Master.designer.cs">
+      <DependentUpon>Browse.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ActivateUser.aspx.cs">
+      <DependentUpon>ActivateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ActivateUser.aspx.designer.cs">
+      <DependentUpon>ActivateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Browse\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BookSupplierRegistration.aspx.cs">
+      <DependentUpon>BookSupplierRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\BookSupplierRegistration.aspx.designer.cs">
+      <DependentUpon>BookSupplierRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChangeDefaultPassword.aspx.cs">
+      <DependentUpon>ChangeDefaultPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ChangeDefaultPassword.aspx.designer.cs">
+      <DependentUpon>ChangeDefaultPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DataCenterRegistration.aspx.cs">
+      <DependentUpon>DataCenterRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DataCenterRegistration.aspx.designer.cs">
+      <DependentUpon>DataCenterRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DistributionPointRegistration.aspx.cs">
+      <DependentUpon>DistributionPointRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DistributionPointRegistration.aspx.designer.cs">
+      <DependentUpon>DistributionPointRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EbookPublisherRegistration.aspx.cs">
+      <DependentUpon>EbookPublisherRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EbookPublisherRegistration.aspx.designer.cs">
+      <DependentUpon>EbookPublisherRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ForeignPublisherRegistration.aspx.cs">
+      <DependentUpon>ForeignPublisherRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ForeignPublisherRegistration.aspx.designer.cs">
+      <DependentUpon>ForeignPublisherRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GeneralError.aspx.cs">
+      <DependentUpon>GeneralError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\GeneralError.aspx.designer.cs">
+      <DependentUpon>GeneralError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LibraryRegistration.aspx.cs">
+      <DependentUpon>LibraryRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\LibraryRegistration.aspx.designer.cs">
+      <DependentUpon>LibraryRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MinistryPaymentsUserRegistration.aspx.cs">
+      <DependentUpon>MinistryPaymentsUserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\MinistryPaymentsUserRegistration.aspx.designer.cs">
+      <DependentUpon>MinistryPaymentsUserRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Msg.aspx.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Msg.aspx.designer.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PageNotFound.aspx.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PageNotFound.aspx.designer.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PricingCommitteeRegistration.aspx.cs">
+      <DependentUpon>PricingCommitteeRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PricingCommitteeRegistration.aspx.designer.cs">
+      <DependentUpon>PricingCommitteeRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PublicationsOfficeRegistration.aspx.cs">
+      <DependentUpon>PublicationsOfficeRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PublicationsOfficeRegistration.aspx.designer.cs">
+      <DependentUpon>PublicationsOfficeRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SchoolSelectPopup.aspx.cs">
+      <DependentUpon>SchoolSelectPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SchoolSelectPopup.aspx.designer.cs">
+      <DependentUpon>SchoolSelectPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PublisherRegistration.aspx.cs">
+      <DependentUpon>PublisherRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PublisherRegistration.aspx.designer.cs">
+      <DependentUpon>PublisherRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SecretaryRegistration.aspx.cs">
+      <DependentUpon>SecretaryRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SecretaryRegistration.aspx.designer.cs">
+      <DependentUpon>SecretaryRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SendActivationEmail.aspx.cs">
+      <DependentUpon>SendActivationEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SendActivationEmail.aspx.designer.cs">
+      <DependentUpon>SendActivationEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AFMInput.cs" />
+    <Compile Include="Controls\ApplicationUser.cs" />
+    <Compile Include="Controls\BaseEntityUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BasePortalPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BotShield.cs" />
+    <Compile Include="DataSources\BookSuppliers.cs" />
+    <Compile Include="DataSources\DataCenters.cs" />
+    <Compile Include="DataSources\DistributionPoints.cs" />
+    <Compile Include="DataSources\HelpdeskUsers.cs" />
+    <Compile Include="DataSources\LessonReports.cs" />
+    <Compile Include="DataSources\Libraries.cs" />
+    <Compile Include="DataSources\MinistryPaymentsUsers.cs" />
+    <Compile Include="DataSources\PricingCommittees.cs" />
+    <Compile Include="DataSources\PublicationsOffices.cs" />
+    <Compile Include="DataSources\Views.cs" />
+    <Compile Include="Helpdesk\AddHelpdeskUser.aspx.cs">
+      <DependentUpon>AddHelpdeskUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\AddHelpdeskUser.aspx.designer.cs">
+      <DependentUpon>AddHelpdeskUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditBookSupplier.aspx.cs">
+      <DependentUpon>EditBookSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditBookSupplier.aspx.designer.cs">
+      <DependentUpon>EditBookSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditDataCenter.aspx.cs">
+      <DependentUpon>EditDataCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditDataCenter.aspx.designer.cs">
+      <DependentUpon>EditDataCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditDistributionPoint.aspx.cs">
+      <DependentUpon>EditDistributionPoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditDistributionPoint.aspx.designer.cs">
+      <DependentUpon>EditDistributionPoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditHelpdeskUser.aspx.cs">
+      <DependentUpon>EditHelpdeskUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditHelpdeskUser.aspx.designer.cs">
+      <DependentUpon>EditHelpdeskUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditIncidentReportHandler.aspx.cs">
+      <DependentUpon>EditIncidentReportHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditIncidentReportHandler.aspx.designer.cs">
+      <DependentUpon>EditIncidentReportHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditLibrary.aspx.cs">
+      <DependentUpon>EditLibrary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditLibrary.aspx.designer.cs">
+      <DependentUpon>EditLibrary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditMinistryPaymentsUser.aspx.cs">
+      <DependentUpon>EditMinistryPaymentsUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditMinistryPaymentsUser.aspx.designer.cs">
+      <DependentUpon>EditMinistryPaymentsUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditPricingCommittee.aspx.cs">
+      <DependentUpon>EditPricingCommittee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditPricingCommittee.aspx.designer.cs">
+      <DependentUpon>EditPricingCommittee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditPublicationsOffice.aspx.cs">
+      <DependentUpon>EditPublicationsOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditPublicationsOffice.aspx.designer.cs">
+      <DependentUpon>EditPublicationsOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\HelpdeskAdministration.aspx.cs">
+      <DependentUpon>HelpdeskAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\HelpdeskAdministration.aspx.designer.cs">
+      <DependentUpon>HelpdeskAdministration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\HelpdeskUsers.aspx.cs">
+      <DependentUpon>HelpdeskUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\HelpdeskUsers.aspx.designer.cs">
+      <DependentUpon>HelpdeskUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\SearchLessonReports.aspx.cs">
+      <DependentUpon>SearchLessonReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\SearchLessonReports.aspx.designer.cs">
+      <DependentUpon>SearchLessonReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\SearchSupervisorReports.aspx.cs">
+      <DependentUpon>SearchSupervisorReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\SearchSupervisorReports.aspx.designer.cs">
+      <DependentUpon>SearchSupervisorReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportHandlerInput.ascx.cs">
+      <DependentUpon>IncidentReportHandlerInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportHandlerInput.ascx.designer.cs">
+      <DependentUpon>IncidentReportHandlerInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyBookSupplier.aspx.cs">
+      <DependentUpon>VerifyBookSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyBookSupplier.aspx.designer.cs">
+      <DependentUpon>VerifyBookSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyBookSuppliers.aspx.cs">
+      <DependentUpon>VerifyBookSuppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyBookSuppliers.aspx.designer.cs">
+      <DependentUpon>VerifyBookSuppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDataCenter.aspx.cs">
+      <DependentUpon>VerifyDataCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDataCenter.aspx.designer.cs">
+      <DependentUpon>VerifyDataCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDataCenters.aspx.cs">
+      <DependentUpon>VerifyDataCenters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDataCenters.aspx.designer.cs">
+      <DependentUpon>VerifyDataCenters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDistributionPoint.aspx.cs">
+      <DependentUpon>VerifyDistributionPoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDistributionPoint.aspx.designer.cs">
+      <DependentUpon>VerifyDistributionPoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDistributionPoints.aspx.cs">
+      <DependentUpon>VerifyDistributionPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyDistributionPoints.aspx.designer.cs">
+      <DependentUpon>VerifyDistributionPoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyLibraries.aspx.cs">
+      <DependentUpon>VerifyLibraries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyLibraries.aspx.designer.cs">
+      <DependentUpon>VerifyLibraries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyLibrary.aspx.cs">
+      <DependentUpon>VerifyLibrary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyLibrary.aspx.designer.cs">
+      <DependentUpon>VerifyLibrary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyMinistryPaymentsUser.aspx.cs">
+      <DependentUpon>VerifyMinistryPaymentsUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyMinistryPaymentsUser.aspx.designer.cs">
+      <DependentUpon>VerifyMinistryPaymentsUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyMinistryPaymentsUsers.aspx.cs">
+      <DependentUpon>VerifyMinistryPaymentsUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyMinistryPaymentsUsers.aspx.designer.cs">
+      <DependentUpon>VerifyMinistryPaymentsUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPricingCommittee.aspx.cs">
+      <DependentUpon>VerifyPricingCommittee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPricingCommittee.aspx.designer.cs">
+      <DependentUpon>VerifyPricingCommittee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPricingCommittees.aspx.cs">
+      <DependentUpon>VerifyPricingCommittees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPricingCommittees.aspx.designer.cs">
+      <DependentUpon>VerifyPricingCommittees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublicationsOffice.aspx.cs">
+      <DependentUpon>VerifyPublicationsOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublicationsOffice.aspx.designer.cs">
+      <DependentUpon>VerifyPublicationsOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublicationsOffices.aspx.cs">
+      <DependentUpon>VerifyPublicationsOffices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublicationsOffices.aspx.designer.cs">
+      <DependentUpon>VerifyPublicationsOffices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\ViewReporterReports.aspx.cs">
+      <DependentUpon>ViewReporterReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\ViewReporterReports.aspx.designer.cs">
+      <DependentUpon>ViewReporterReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\AcademicDetails.cs" />
+    <Compile Include="DataSources\Academics.cs" />
+    <Compile Include="DataSources\IncidentReportPosts.cs" />
+    <Compile Include="DataSources\IncidentReports.cs" />
+    <Compile Include="DataSources\IncidentTypes.cs" />
+    <Compile Include="DataSources\Reporters.cs" />
+    <Compile Include="DataSources\Publishers.cs" />
+    <Compile Include="DataSources\Secretaries.cs" />
+    <Compile Include="DataSources\SubSystems.cs" />
+    <Compile Include="DataSources\Users.cs" />
+    <Compile Include="DataSources\RegisteredPublishers.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\AddIncidentReportPost.aspx.cs">
+      <DependentUpon>AddIncidentReportPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\AddIncidentReportPost.aspx.designer.cs">
+      <DependentUpon>AddIncidentReportPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateSubSystem.aspx.cs">
+      <DependentUpon>CreateSubSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateSubSystem.aspx.designer.cs">
+      <DependentUpon>CreateSubSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditAcademicDetails.aspx.cs">
+      <DependentUpon>EditAcademicDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditAcademicDetails.aspx.designer.cs">
+      <DependentUpon>EditAcademicDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditIncidentReport.aspx.cs">
+      <DependentUpon>EditIncidentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditIncidentReport.aspx.designer.cs">
+      <DependentUpon>EditIncidentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditPublisher.aspx.cs">
+      <DependentUpon>EditPublisher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditPublisher.aspx.designer.cs">
+      <DependentUpon>EditPublisher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditReporter.aspx.cs">
+      <DependentUpon>EditReporter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditReporter.aspx.designer.cs">
+      <DependentUpon>EditReporter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditSubSystem.aspx.cs">
+      <DependentUpon>EditSubSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditSubSystem.aspx.designer.cs">
+      <DependentUpon>EditSubSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\EditSecretary.aspx.cs">
+      <DependentUpon>EditSecretary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\EditSecretary.aspx.designer.cs">
+      <DependentUpon>EditSecretary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\Helpdesk.Master.cs">
+      <DependentUpon>Helpdesk.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\Helpdesk.Master.designer.cs">
+      <DependentUpon>Helpdesk.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\NonRegisteredAcademics.aspx.cs">
+      <DependentUpon>NonRegisteredAcademics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\NonRegisteredAcademics.aspx.designer.cs">
+      <DependentUpon>NonRegisteredAcademics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\OnlineReports.aspx.cs">
+      <DependentUpon>OnlineReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\OnlineReports.aspx.designer.cs">
+      <DependentUpon>OnlineReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\ReportIncident.aspx.cs">
+      <DependentUpon>ReportIncident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\ReportIncident.aspx.designer.cs">
+      <DependentUpon>ReportIncident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\SearchIncidentReports.aspx.cs">
+      <DependentUpon>SearchIncidentReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\SearchIncidentReports.aspx.designer.cs">
+      <DependentUpon>SearchIncidentReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\SearchReporters.aspx.cs">
+      <DependentUpon>SearchReporters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\SearchReporters.aspx.designer.cs">
+      <DependentUpon>SearchReporters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SubSystemManagement.aspx.cs">
+      <DependentUpon>SubSystemManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SubSystemManagement.aspx.designer.cs">
+      <DependentUpon>SubSystemManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\AcademicDetailInput.ascx.cs">
+      <DependentUpon>AcademicDetailInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\AcademicDetailInput.ascx.designer.cs">
+      <DependentUpon>AcademicDetailInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportInput.ascx.cs">
+      <DependentUpon>IncidentReportInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportInput.ascx.designer.cs">
+      <DependentUpon>IncidentReportInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportPostInput.ascx.cs">
+      <DependentUpon>IncidentReportPostInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportPostInput.ascx.designer.cs">
+      <DependentUpon>IncidentReportPostInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportPostsView.ascx.cs">
+      <DependentUpon>IncidentReportPostsView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportPostsView.ascx.designer.cs">
+      <DependentUpon>IncidentReportPostsView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportsGridview.ascx.cs">
+      <DependentUpon>IncidentReportsGridview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportsGridview.ascx.designer.cs">
+      <DependentUpon>IncidentReportsGridview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportsGridview.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncidentReportsGridview.tt</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportView.ascx.cs">
+      <DependentUpon>IncidentReportView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\IncidentReportView.ascx.designer.cs">
+      <DependentUpon>IncidentReportView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\ReporterInput.ascx.cs">
+      <DependentUpon>ReporterInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\UserControls\ReporterInput.ascx.designer.cs">
+      <DependentUpon>ReporterInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserControls\SubSystemInput.ascx.cs">
+      <DependentUpon>SubSystemInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControls\SubSystemInput.ascx.designer.cs">
+      <DependentUpon>SubSystemInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublisher.aspx.cs">
+      <DependentUpon>VerifyPublisher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublisher.aspx.designer.cs">
+      <DependentUpon>VerifyPublisher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublishers.aspx.cs">
+      <DependentUpon>VerifyPublishers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifyPublishers.aspx.designer.cs">
+      <DependentUpon>VerifyPublishers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifySecretaries.aspx.cs">
+      <DependentUpon>VerifySecretaries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifySecretaries.aspx.designer.cs">
+      <DependentUpon>VerifySecretaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\VerifySecretary.aspx.cs">
+      <DependentUpon>VerifySecretary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\VerifySecretary.aspx.designer.cs">
+      <DependentUpon>VerifySecretary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\ViewAccountDetails.aspx.cs">
+      <DependentUpon>ViewAccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\ViewAccountDetails.aspx.designer.cs">
+      <DependentUpon>ViewAccountDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpdesk\ViewIncident.aspx.cs">
+      <DependentUpon>ViewIncident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpdesk\ViewIncident.aspx.designer.cs">
+      <DependentUpon>ViewIncident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp.Master.cs">
+      <DependentUpon>PopUp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUp.Master.designer.cs">
+      <DependentUpon>PopUp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Portal.Master.cs">
+      <DependentUpon>Portal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal.Master.designer.cs">
+      <DependentUpon>Portal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PortalServices\Services.asmx.cs">
+      <DependentUpon>Services.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\BookSupplierDetailsPopup.aspx.cs">
+      <DependentUpon>BookSupplierDetailsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\BookSupplierDetailsPopup.aspx.designer.cs">
+      <DependentUpon>BookSupplierDetailsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BookSupplierRegistrationsByDay.aspx.cs">
+      <DependentUpon>BookSupplierRegistrationsByDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\BookSupplierRegistrationsByDay.aspx.designer.cs">
+      <DependentUpon>BookSupplierRegistrationsByDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataCenterDetailsPopup.aspx.cs">
+      <DependentUpon>DataCenterDetailsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DataCenterDetailsPopup.aspx.designer.cs">
+      <DependentUpon>DataCenterDetailsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataCenterRegistrationsByDay.aspx.cs">
+      <DependentUpon>DataCenterRegistrationsByDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DataCenterRegistrationsByDay.aspx.designer.cs">
+      <DependentUpon>DataCenterRegistrationsByDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DistributionPointDetailsPopup.aspx.cs">
+      <DependentUpon>DistributionPointDetailsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DistributionPointDetailsPopup.aspx.designer.cs">
+      <DependentUpon>DistributionPointDetailsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DistributionPointRegistrationsByDay.aspx.cs">
+      <DependentUpon>DistributionPointRegistrationsByDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DistributionPointRegistrationsByDay.aspx.designer.cs">
+      <DependentUpon>DistributionPointRegistrationsByDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LibraryDetailsPopup.aspx.cs">
+      <DependentUpon>LibraryDetailsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\LibraryDetailsPopup.aspx.designer.cs">
+      <DependentUpon>LibraryDetailsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LibraryRegistrationsByDay.aspx.cs">
+      <DependentUpon>LibraryRegistrationsByDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\LibraryRegistrationsByDay.aspx.designer.cs">
+      <DependentUpon>LibraryRegistrationsByDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PublicationsOfficeDetailsPopup.aspx.cs">
+      <DependentUpon>PublicationsOfficeDetailsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PublicationsOfficeDetailsPopup.aspx.designer.cs">
+      <DependentUpon>PublicationsOfficeDetailsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PublicationsOfficeRegistrationsByDay.aspx.cs">
+      <DependentUpon>PublicationsOfficeRegistrationsByDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PublicationsOfficeRegistrationsByDay.aspx.designer.cs">
+      <DependentUpon>PublicationsOfficeRegistrationsByDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PublisherRegistrationsByDay.aspx.cs">
+      <DependentUpon>PublisherRegistrationsByDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PublisherRegistrationsByDay.aspx.designer.cs">
+      <DependentUpon>PublisherRegistrationsByDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Reports.Master.cs">
+      <DependentUpon>Reports.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Reports.Master.designer.cs">
+      <DependentUpon>Reports.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RegisteredPublishersDetails.aspx.cs">
+      <DependentUpon>RegisteredPublishersDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\RegisteredPublishersDetails.aspx.designer.cs">
+      <DependentUpon>RegisteredPublishersDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SecretaryDetailsPopup.aspx.cs">
+      <DependentUpon>SecretaryDetailsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\SecretaryDetailsPopup.aspx.designer.cs">
+      <DependentUpon>SecretaryDetailsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SecretaryRegistrationsByDay.aspx.cs">
+      <DependentUpon>SecretaryRegistrationsByDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\SecretaryRegistrationsByDay.aspx.designer.cs">
+      <DependentUpon>SecretaryRegistrationsByDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\BookSupplierDetailsGridView.ascx.cs">
+      <DependentUpon>BookSupplierDetailsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\BookSupplierDetailsGridView.ascx.designer.cs">
+      <DependentUpon>BookSupplierDetailsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\DataCenterDetailsGridView.ascx.cs">
+      <DependentUpon>DataCenterDetailsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\DataCenterDetailsGridView.ascx.designer.cs">
+      <DependentUpon>DataCenterDetailsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\DistributionPointDetailsGridView.ascx.cs">
+      <DependentUpon>DistributionPointDetailsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\DistributionPointDetailsGridView.ascx.designer.cs">
+      <DependentUpon>DistributionPointDetailsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\LibraryDetailsGridView.ascx.cs">
+      <DependentUpon>LibraryDetailsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\LibraryDetailsGridView.ascx.designer.cs">
+      <DependentUpon>LibraryDetailsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\PublicationsOfficeDetailsGridView.ascx.cs">
+      <DependentUpon>PublicationsOfficeDetailsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\PublicationsOfficeDetailsGridView.ascx.designer.cs">
+      <DependentUpon>PublicationsOfficeDetailsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\PublisherDetailsGridView.ascx.cs">
+      <DependentUpon>PublisherDetailsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\PublisherDetailsGridView.ascx.designer.cs">
+      <DependentUpon>PublisherDetailsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\RegisteredPublishersDetails.ascx.cs">
+      <DependentUpon>RegisteredPublishersDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\RegisteredPublishersDetails.ascx.designer.cs">
+      <DependentUpon>RegisteredPublishersDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControls\SecretaryDetailsGridView.ascx.cs">
+      <DependentUpon>SecretaryDetailsGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControls\SecretaryDetailsGridView.ascx.designer.cs">
+      <DependentUpon>SecretaryDetailsGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredBookSuppliers.aspx.cs">
+      <DependentUpon>ViewRegisteredBookSuppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredBookSuppliers.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredBookSuppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredDataCenters.aspx.cs">
+      <DependentUpon>ViewRegisteredDataCenters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredDataCenters.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredDataCenters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredDistributionPoints.aspx.cs">
+      <DependentUpon>ViewRegisteredDistributionPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredDistributionPoints.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredDistributionPoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredLibraries.aspx.cs">
+      <DependentUpon>ViewRegisteredLibraries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredLibraries.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredLibraries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredPublicationsOffices.aspx.cs">
+      <DependentUpon>ViewRegisteredPublicationsOffices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredPublicationsOffices.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredPublicationsOffices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredPublishers.aspx.cs">
+      <DependentUpon>ViewRegisteredPublishers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredPublishers.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredPublishers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredSecretaries.aspx.cs">
+      <DependentUpon>ViewRegisteredSecretaries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewRegisteredSecretaries.aspx.designer.cs">
+      <DependentUpon>ViewRegisteredSecretaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\BookSupplierDetails.aspx.cs">
+      <DependentUpon>BookSupplierDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\BookSupplierDetails.aspx.designer.cs">
+      <DependentUpon>BookSupplierDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\BookSuppliers.Master.cs">
+      <DependentUpon>BookSuppliers.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\BookSuppliers.Master.designer.cs">
+      <DependentUpon>BookSuppliers.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\PrintBookSupplierCertification.aspx.cs">
+      <DependentUpon>PrintBookSupplierCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\BookSuppliers\PrintBookSupplierCertification.aspx.designer.cs">
+      <DependentUpon>PrintBookSupplierCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DataCenters\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DataCenters\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DataCenters\DataCenterDetails.aspx.cs">
+      <DependentUpon>DataCenterDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DataCenters\DataCenterDetails.aspx.designer.cs">
+      <DependentUpon>DataCenterDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DataCenters\DataCenters.Master.cs">
+      <DependentUpon>DataCenters.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DataCenters\DataCenters.Master.designer.cs">
+      <DependentUpon>DataCenters.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DataCenters\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DataCenters\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DataCenters\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DataCenters\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DataCenters\PrintDataCenterCertification.aspx.cs">
+      <DependentUpon>PrintDataCenterCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DataCenters\PrintDataCenterCertification.aspx.designer.cs">
+      <DependentUpon>PrintDataCenterCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\DistributionPointDetails.aspx.cs">
+      <DependentUpon>DistributionPointDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\DistributionPointDetails.aspx.designer.cs">
+      <DependentUpon>DistributionPointDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\DistributionPoints.Master.cs">
+      <DependentUpon>DistributionPoints.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\DistributionPoints.Master.designer.cs">
+      <DependentUpon>DistributionPoints.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\PrintDistributionPointCertification.aspx.cs">
+      <DependentUpon>PrintDistributionPointCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\DistributionPoints\PrintDistributionPointCertification.aspx.designer.cs">
+      <DependentUpon>PrintDistributionPointCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Libraries\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Libraries\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Libraries\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Libraries\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Libraries\DistributionPointCreation.aspx.cs">
+      <DependentUpon>DistributionPointCreation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Libraries\DistributionPointCreation.aspx.designer.cs">
+      <DependentUpon>DistributionPointCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Libraries\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Libraries\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Libraries\Libraries.Master.cs">
+      <DependentUpon>Libraries.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Libraries\Libraries.Master.designer.cs">
+      <DependentUpon>Libraries.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Libraries\LibraryDetails.aspx.cs">
+      <DependentUpon>LibraryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Libraries\LibraryDetails.aspx.designer.cs">
+      <DependentUpon>LibraryDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Libraries\PrintLibraryCertification.aspx.cs">
+      <DependentUpon>PrintLibraryCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Libraries\PrintLibraryCertification.aspx.designer.cs">
+      <DependentUpon>PrintLibraryCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\MinistryPayments.Master.cs">
+      <DependentUpon>MinistryPayments.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\MinistryPayments.Master.designer.cs">
+      <DependentUpon>MinistryPayments.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\MinistryPaymentsUserDetails.aspx.cs">
+      <DependentUpon>MinistryPaymentsUserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\MinistryPayments\MinistryPaymentsUserDetails.aspx.designer.cs">
+      <DependentUpon>MinistryPaymentsUserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\PricingCommitteeDetails.aspx.cs">
+      <DependentUpon>PricingCommitteeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\PricingCommitteeDetails.aspx.designer.cs">
+      <DependentUpon>PricingCommitteeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\PricingCommittees.Master.cs">
+      <DependentUpon>PricingCommittees.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PricingCommittees\PricingCommittees.Master.designer.cs">
+      <DependentUpon>PricingCommittees.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\PrintPublicationsOfficeCertification.aspx.cs">
+      <DependentUpon>PrintPublicationsOfficeCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\PrintPublicationsOfficeCertification.aspx.designer.cs">
+      <DependentUpon>PrintPublicationsOfficeCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\PublicationsOfficeDetails.aspx.cs">
+      <DependentUpon>PublicationsOfficeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\PublicationsOfficeDetails.aspx.designer.cs">
+      <DependentUpon>PublicationsOfficeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\PublicationsOffices.Master.cs">
+      <DependentUpon>PublicationsOffices.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\PublicationsOffices\PublicationsOffices.Master.designer.cs">
+      <DependentUpon>PublicationsOffices.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Publishers\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Publishers\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Publishers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Publishers\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Publishers\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Publishers\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Publishers\PrintPublisherCertification.aspx.cs">
+      <DependentUpon>PrintPublisherCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Publishers\PrintPublisherCertification.aspx.designer.cs">
+      <DependentUpon>PrintPublisherCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Publishers\PublisherDetails.aspx.cs">
+      <DependentUpon>PublisherDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Publishers\PublisherDetails.aspx.designer.cs">
+      <DependentUpon>PublisherDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Publishers\Publishers.Master.cs">
+      <DependentUpon>Publishers.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Publishers\Publishers.Master.designer.cs">
+      <DependentUpon>Publishers.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Secretaries\ContactForm.aspx.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Secretaries\ContactForm.aspx.designer.cs">
+      <DependentUpon>ContactForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Secretaries\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Secretaries\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Secretaries\DistributionPointCreation.aspx.cs">
+      <DependentUpon>DistributionPointCreation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Secretaries\DistributionPointCreation.aspx.designer.cs">
+      <DependentUpon>DistributionPointCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Secretaries\HelpdeskContact.aspx.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Secretaries\HelpdeskContact.aspx.designer.cs">
+      <DependentUpon>HelpdeskContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Secretaries\PrintSecretaryCertification.aspx.cs">
+      <DependentUpon>PrintSecretaryCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Secretaries\PrintSecretaryCertification.aspx.designer.cs">
+      <DependentUpon>PrintSecretaryCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Secretaries\SecretaryDetails.aspx.cs">
+      <DependentUpon>SecretaryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Secretaries\SecretaryDetails.aspx.designer.cs">
+      <DependentUpon>SecretaryDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\Secretaries\Secretaries.Master.cs">
+      <DependentUpon>Secretaries.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\Secretaries\Secretaries.Master.designer.cs">
+      <DependentUpon>Secretaries.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage2.aspx.cs">
+      <DependentUpon>TestPage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPage2.aspx.designer.cs">
+      <DependentUpon>TestPage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BookSupplierInput.ascx.cs">
+      <DependentUpon>BookSupplierInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BookSupplierInput.ascx.designer.cs">
+      <DependentUpon>BookSupplierInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Secure\UserControls\ContactFormInput.ascx.cs">
+      <DependentUpon>ContactFormInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secure\UserControls\ContactFormInput.ascx.designer.cs">
+      <DependentUpon>ContactFormInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DataCenterInput.ascx.cs">
+      <DependentUpon>DataCenterInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DataCenterInput.ascx.designer.cs">
+      <DependentUpon>DataCenterInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DistributionPointInput.ascx.cs">
+      <DependentUpon>DistributionPointInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DistributionPointInput.ascx.designer.cs">
+      <DependentUpon>DistributionPointInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HelpdeskUserInput.ascx.cs">
+      <DependentUpon>HelpdeskUserInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\HelpdeskUserInput.ascx.designer.cs">
+      <DependentUpon>HelpdeskUserInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InstitutionDistributionPointInput.ascx.cs">
+      <DependentUpon>InstitutionDistributionPointInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\InstitutionDistributionPointInput.ascx.designer.cs">
+      <DependentUpon>InstitutionDistributionPointInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MinistryPaymentsUserInput.ascx.cs">
+      <DependentUpon>MinistryPaymentsUserInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MinistryPaymentsUserInput.ascx.designer.cs">
+      <DependentUpon>MinistryPaymentsUserInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PricingCommitteeInput.ascx.cs">
+      <DependentUpon>PricingCommitteeInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PricingCommitteeInput.ascx.designer.cs">
+      <DependentUpon>PricingCommitteeInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StoreDistributionPointInput.ascx.cs">
+      <DependentUpon>StoreDistributionPointInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\StoreDistributionPointInput.ascx.designer.cs">
+      <DependentUpon>StoreDistributionPointInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EbookPublisherInput.ascx.cs">
+      <DependentUpon>EbookPublisherInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EbookPublisherInput.ascx.designer.cs">
+      <DependentUpon>EbookPublisherInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EmailForm.ascx.cs">
+      <DependentUpon>EmailForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EmailForm.ascx.designer.cs">
+      <DependentUpon>EmailForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ForeignLegalPersonInput.ascx.cs">
+      <DependentUpon>ForeignLegalPersonInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ForeignLegalPersonInput.ascx.designer.cs">
+      <DependentUpon>ForeignLegalPersonInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LibraryInput.ascx.cs">
+      <DependentUpon>LibraryInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LibraryInput.ascx.designer.cs">
+      <DependentUpon>LibraryInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PublicationsOfficeInput.ascx.cs">
+      <DependentUpon>PublicationsOfficeInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PublicationsOfficeInput.ascx.designer.cs">
+      <DependentUpon>PublicationsOfficeInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SecretaryInput.ascx.cs">
+      <DependentUpon>SecretaryInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SecretaryInput.ascx.designer.cs">
+      <DependentUpon>SecretaryInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SelfPublisherInput.ascx.cs">
+      <DependentUpon>SelfPublisherInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SelfPublisherInput.ascx.designer.cs">
+      <DependentUpon>SelfPublisherInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PublisherInput.ascx.cs">
+      <DependentUpon>PublisherInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PublisherInput.ascx.designer.cs">
+      <DependentUpon>PublisherInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LegalPersonInput.ascx.cs">
+      <DependentUpon>LegalPersonInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LegalPersonInput.ascx.designer.cs">
+      <DependentUpon>LegalPersonInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FlashMessage.ascx.cs">
+      <DependentUpon>FlashMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FlashMessage.ascx.designer.cs">
+      <DependentUpon>FlashMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\IdentityControl.ascx.cs">
+      <DependentUpon>IdentityControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\IdentityControl.ascx.designer.cs">
+      <DependentUpon>IdentityControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoginBar.ascx.cs">
+      <DependentUpon>LoginBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoginBar.ascx.designer.cs">
+      <DependentUpon>LoginBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserInput.ascx.cs">
+      <DependentUpon>RegisterUserInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RegisterUserInput.ascx.designer.cs">
+      <DependentUpon>RegisterUserInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TipIcon.ascx.cs">
+      <DependentUpon>TipIcon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\TipIcon.ascx.designer.cs">
+      <DependentUpon>TipIcon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ActivatePublisher.cs" />
+    <Compile Include="Utils\CacheManager.cs" />
+    <Compile Include="Utils\Config.cs" />
+    <Compile Include="Utils\StringExtensions.cs" />
+    <Compile Include="Utils\UI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Helpdesk\Default.aspx" />
+    <Content Include="_css\backOffice.css" />
+    <Content Include="_css\jquery-ui\redmond\back\images\animated-overlay.gif" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\back\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\back\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="_css\jquery-ui\redmond\images\animated-overlay.gif" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_flat_0_DCDCDC_40x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_flat_80_f2f2f2_40x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_highlight-hard_80_fbf9ee_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_highlight-hard_95_d5d5d5_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_highlight-hard_95_E0DFDF_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_highlight-soft_75_DCDCDC_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_222222_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_404040_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_454545_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_888888_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="_css\jquery-ui\redmond\jquery-ui-1.10.1.custom.css" />
+    <Content Include="_css\jquery-ui\redmond\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="_css\portal.css" />
+    <Content Include="_css\newLogin3.css" />
+    <Content Include="_css\main.css" />
+    <Content Include="_css\registeredUsers3.css" />
+    <Content Include="_img\bc_bg.png" />
+    <Content Include="_img\bc_separator.png" />
+    <Content Include="_img\ee_1.png" />
+    <Content Include="_img\error.gif" />
+    <Content Include="_img\espa_1.png" />
+    <Content Include="_img\grnet_logo_1.png" />
+    <Content Include="_img\help.png" />
+    <Content Include="_img\home.png" />
+    <Content Include="_img\iconAccept.png" />
+    <Content Include="_img\iconAcceptAll.png" />
+    <Content Include="_img\iconAdd.png" />
+    <Content Include="_img\iconAddNewItem.png" />
+    <Content Include="_img\iconBack.png" />
+    <Content Include="_img\iconCalendar.png" />
+    <Content Include="_img\iconCancel.png" />
+    <Content Include="_img\iconCellphone.png" />
+    <Content Include="_img\iconCollapse.jpg" />
+    <Content Include="_img\iconComment.png" />
+    <Content Include="_img\iconDelete.png" />
+    <Content Include="_img\iconDeleteCellphone.png" />
+    <Content Include="_img\iconEdit.png" />
+    <Content Include="_img\iconEmail.png" />
+    <Content Include="_img\iconEmailEdit.png" />
+    <Content Include="_img\iconEmailSend.png" />
+    <Content Include="_img\iconExcel.png" />
+    <Content Include="_img\iconExpand.jpg" />
+    <Content Include="_img\iconHelp.png" />
+    <Content Include="_img\iconHistory.png" />
+    <Content Include="_img\iconInformation.png" />
+    <Content Include="_img\iconLock.png" />
+    <Content Include="_img\iconNext.png" />
+    <Content Include="_img\iconNo.png" />
+    <Content Include="_img\iconPasswordEdit.png" />
+    <Content Include="_img\iconPrevious.png" />
+    <Content Include="_img\iconPrint.png" />
+    <Content Include="_img\iconQuestionnaire.png" />
+    <Content Include="_img\iconReject.png" />
+    <Content Include="_img\iconRemoveSchool.png" />
+    <Content Include="_img\iconReportEdit.png" />
+    <Content Include="_img\iconSave.png" />
+    <Content Include="_img\iconSaveComment.png" />
+    <Content Include="_img\iconSearch.png" />
+    <Content Include="_img\iconSelectSchool.png" />
+    <Content Include="_img\iconUndo.png" />
+    <Content Include="_img\iconUnlock.png" />
+    <Content Include="_img\iconView.png" />
+    <Content Include="_img\iconYes.png" />
+    <Content Include="_img\information.png" />
+    <Content Include="_img\laptop.png" />
+    <Content Include="_img\login.png" />
+    <Content Include="_img\login_cell1_bottom_left.png" />
+    <Content Include="_img\login_cell1_bottom_right.png" />
+    <Content Include="_img\login_cell1_top_left.png" />
+    <Content Include="_img\login_cell1_top_right.png" />
+    <Content Include="_img\login_cell2_bottom_left.png" />
+    <Content Include="_img\login_cell2_bottom_right.png" />
+    <Content Include="_img\login_cell2_top_left.png" />
+    <Content Include="_img\login_cell2_top_right.png" />
+    <Content Include="_img\login_cell3_bottom_left.png" />
+    <Content Include="_img\login_cell3_bottom_right.png" />
+    <Content Include="_img\login_cell3_top_left.png" />
+    <Content Include="_img\login_cell3_top_right.png" />
+    <Content Include="_img\logo_destinpsifiaka.png" />
+    <Content Include="_img\logo_psifiakiEllada.png" />
+    <Content Include="_img\minedu1.jpg" />
+    <Content Include="_img\minedu1.png" />
+    <Content Include="_img\minedu2.jpg" />
+    <Content Include="_img\minedu2.png" />
+    <Content Include="_img\minedu_logo_2.png" />
+    <Content Include="_img\minedu_logo_3.jpg" />
+    <Content Include="_img\minedu_logo_3.png" />
+    <Content Include="_img\phone.png" />
+    <Content Include="_img\progress.gif" />
+    <Content Include="_img\psifiaki_ellada_1.png" />
+    <Content Include="_img\TriStateCheckBoxBG.gif" />
+    <Content Include="_img\TriStateCheckBoxBG_ReadOnly.gif" />
+    <Content Include="_img\wz-filereport.png" />
+    <Content Include="_js\Imis.Lib.js" />
+    <Content Include="_js\import.js" />
+    <Content Include="_js\jquery-2.0.3.min.js" />
+    <Content Include="_js\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="_js\jquery-vsdoc.js" />
+    <Content Include="_js\jquery.js" />
+    <Content Include="_js\lists.js" />
+    <Content Include="_js\popUp1.js" />
+    <Content Include="_js\SchoolSearch.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Helpdesk\Helpdesk.Master" />
+    <Content Include="Helpdesk\helpdesk.sitemap" />
+    <Content Include="Helpdesk\SearchIncidentReports.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Default.skin" />
+    <Content Include="Common\GeneralError.aspx" />
+    <Content Include="Common\PageNotFound.aspx" />
+    <Content Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\AccessDenied.aspx" />
+    <Content Include="Helpdesk\ReportIncident.aspx" />
+    <Content Include="Portal.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Helpdesk\AddIncidentReportPost.aspx" />
+    <Content Include="Admin\CreateSubSystem.aspx" />
+    <Content Include="Helpdesk\EditReporter.aspx" />
+    <Content Include="Admin\EditSubSystem.aspx" />
+    <Content Include="Helpdesk\SearchReporters.aspx" />
+    <Content Include="Admin\SubSystemManagement.aspx" />
+    <Content Include="Helpdesk\UserControls\IncidentReportInput.ascx" />
+    <Content Include="Helpdesk\UserControls\IncidentReportPostInput.ascx" />
+    <Content Include="Helpdesk\UserControls\IncidentReportPostsView.ascx" />
+    <Content Include="Helpdesk\UserControls\IncidentReportView.ascx" />
+    <Content Include="Helpdesk\UserControls\ReporterInput.ascx" />
+    <Content Include="Admin\UserControls\SubSystemInput.ascx" />
+    <Content Include="Helpdesk\ViewIncident.aspx" />
+    <Content Include="PopUp.Master" />
+    <Content Include="_img\iconPending.png" />
+    <Content Include="_img\iconUserComment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\admin.sitemap" />
+    <Content Include="Admin\CreateIncidentType.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\EditIncidentType.aspx" />
+    <Content Include="Admin\IncidentTypeManagement.aspx" />
+    <Content Include="Admin\UserControls\IncidentTypeInput.ascx" />
+    <Content Include="App_Data\Mails.xml" />
+    <Content Include="Common\ActivateUser.aspx" />
+    <Content Include="Common\PublisherRegistration.aspx" />
+    <Content Include="App_GlobalResources\RegistrationInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RegistrationInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ActivateUser.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ActivateUser.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SelfPublisherInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SelfPublisherInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\LegalPersonInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LegalPersonInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SecretaryInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SecretaryInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EbookPublisherInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EbookPublisherInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\PublicationsOfficeInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>PublicationsOfficeInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\DataCenterInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>DataCenterInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\DistributionPointInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>DistributionPointInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\LibraryInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LibraryInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\BookSupplierInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>BookSupplierInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\PricingCommitteeInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>PricingCommitteeInput.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\MinistryPaymentsUserInput.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MinistryPaymentsUserInput.designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Controls\BotShield.js" />
+    <Content Include="_rdlc\SecretaryCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_rdlc\SelfPublisherCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_rdlc\LegalPersonCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Secure\Publishers\Default.aspx" />
+    <Content Include="UserControls\RegisterUserInput.ascx" />
+    <Content Include="UserControls\TipIcon.ascx" />
+    <Content Include="_rdlc\EbookPublisherCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_rdlc\PublicationsOfficeCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_rdlc\DataCenterCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_rdlc\DistributionPointCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_rdlc\LibraryCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_rdlc\BookSupplierCertification.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Msg.aspx" />
+    <Content Include="Common\SchoolSelectPopup.aspx" />
+    <Content Include="Helpdesk\VerifyPublishers.aspx" />
+    <Content Include="PortalServices\Services.asmx" />
+    <Content Include="Secure\Publishers\PrintPublisherCertification.aspx" />
+    <Content Include="Secure\Publishers\PublisherDetails.aspx" />
+    <Content Include="Secure\Publishers\Publishers.Master" />
+    <Content Include="Secure\Publishers\Publishers.sitemap" />
+    <Content Include="Secure\Publishers\Web.config" />
+    <Content Include="UserControls\ChangePassword.ascx" />
+    <Content Include="UserControls\FlashMessage.ascx" />
+    <Content Include="UserControls\LoginBar.ascx" />
+    <Content Include="_img\evdoxos_logo.png" />
+    <Content Include="_img\grnet_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Helpdesk\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Secure\Secretaries\Default.aspx" />
+    <Content Include="Secure\Secretaries\PrintSecretaryCertification.aspx" />
+    <Content Include="Secure\Secretaries\SecretaryDetails.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\LoginAsUser.aspx" />
+    <Content Include="Common\ForgotPassword.aspx" />
+    <Content Include="Secure\Secretaries\Secretaries.Master" />
+    <Content Include="Secure\Secretaries\Secretaries.sitemap" />
+    <Content Include="Secure\Secretaries\Web.config" />
+    <Content Include="_img\square-gray-left.gif" />
+    <Content Include="_img\square-gray-right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Web.config" />
+    <Content Include="Browse\ContactForm.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Browse\Browse.Master" />
+    <Content Include="Common\ChangePassword.aspx" />
+    <Content Include="Common\SecretaryRegistration.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Helpdesk\EditIncidentReport.aspx" />
+    <Content Include="Helpdesk\EditPublisher.aspx" />
+    <Content Include="Helpdesk\OnlineReports.aspx" />
+    <Content Include="Helpdesk\VerifyPublisher.aspx" />
+    <Content Include="Helpdesk\ViewAccountDetails.aspx" />
+    <Content Include="Secure\Publishers\ContactForm.aspx" />
+    <Content Include="Secure\Publishers\HelpdeskContact.aspx" />
+    <Content Include="TestPage2.aspx" />
+    <Content Include="Secure\UserControls\ContactFormInput.ascx" />
+    <Content Include="UserControls\SecretaryInput.ascx" />
+    <Content Include="UserControls\SelfPublisherInput.ascx" />
+    <Content Include="UserControls\PublisherInput.ascx" />
+    <Content Include="UserControls\LegalPersonInput.ascx" />
+    <Content Include="UserControls\IdentityControl.ascx" />
+    <Content Include="UserControls\IdentityControl.js" />
+    <Content Include="_css\jquery-ui.css" />
+    <Content Include="_img\iconUserEdit.png" />
+    <Content Include="_img\iconViewDetails.png" />
+    <Content Include="_img\s.gif" />
+    <Content Include="_img\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="_img\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="_img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="_img\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="_img\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="_img\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="_img\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="_img\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="_img\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="_img\ui-bg_glass_75_5d7b9d_1x400.png" />
+    <Content Include="_img\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="_img\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="_img\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="_img\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="_img\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="_img\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="_img\ui-icons_222222_256x240.png" />
+    <Content Include="_img\ui-icons_228ef1_256x240.png" />
+    <Content Include="_img\ui-icons_2e83ff_256x240.png" />
+    <Content Include="_img\ui-icons_454545_256x240.png" />
+    <Content Include="_img\ui-icons_888888_256x240.png" />
+    <Content Include="_img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="_img\ui-icons_ef8c08_256x240.png" />
+    <Content Include="_img\ui-icons_ffd27a_256x240.png" />
+    <Content Include="_img\ui-icons_ffffff_256x240.png" />
+    <Content Include="_js\jquery-impromptu.1.8.js" />
+    <Content Include="_js\jquery-ui.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\Reports.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\Reports.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Helpdesk\UserControls\IncidentReportsGridview.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IncidentReportsGridview.cs</LastGenOutput>
+    </None>
+    <Content Include="Secure\PublicationsOffices\Web.config" />
+    <Content Include="Secure\PublicationsOffices\PublicationsOffices.Master" />
+    <Content Include="Secure\PublicationsOffices\PublicationsOffices.sitemap" />
+    <Content Include="Secure\DataCenters\DataCenters.Master" />
+    <Content Include="Secure\DataCenters\DataCenters.sitemap" />
+    <Content Include="Secure\DataCenters\Web.config" />
+    <Content Include="Secure\DistributionPoints\DistributionPoints.Master" />
+    <Content Include="Secure\DistributionPoints\DistributionPoints.sitemap" />
+    <Content Include="Secure\DistributionPoints\Web.config" />
+    <Content Include="Secure\Libraries\Libraries.Master" />
+    <Content Include="Secure\Libraries\Libraries.sitemap" />
+    <Content Include="Secure\Libraries\Web.config" />
+    <Content Include="Secure\BookSuppliers\BookSuppliers.Master" />
+    <Content Include="Secure\BookSuppliers\BookSuppliers.sitemap" />
+    <Content Include="Secure\BookSuppliers\Web.config" />
+    <Content Include="_css\jquery-ui.zip" />
+    <Content Include="Secure\PricingCommittees\PricingCommittees.Master" />
+    <Content Include="Secure\PricingCommittees\PricingCommittees.sitemap" />
+    <Content Include="Secure\PricingCommittees\Web.config" />
+    <Content Include="Secure\MinistryPayments\MinistryPayments.Master" />
+    <Content Include="Secure\MinistryPayments\MinistryPayments.sitemap" />
+    <Content Include="Secure\MinistryPayments\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eudoxus.BusinessModel\Eudoxus.BusinessModel.csproj">
+      <Project>{20DF662D-628F-47E5-A4F1-2934BD9E34D0}</Project>
+      <Name>Eudoxus.BusinessModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eudoxus.eService\Eudoxus.eService.csproj">
+      <Project>{9DFAE2ED-B745-4769-8B79-528A694F342A}</Project>
+      <Name>Eudoxus.eService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eudoxus.Mails\Eudoxus.Mails.csproj">
+      <Project>{F1BE36BC-E66A-411E-8E22-96AC74536A6B}</Project>
+      <Name>Eudoxus.Mails</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eudoxus.Queue\Eudoxus.Queue.csproj">
+      <Project>{D3F11CFD-5742-4906-9C79-F6E245364E03}</Project>
+      <Name>Eudoxus.Queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eudoxus.Utils\Eudoxus.Utils.csproj">
+      <Project>{2A048A6E-5369-4F1B-B671-383F1B5F5359}</Project>
+      <Name>Eudoxus.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1602</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

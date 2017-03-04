@@ -1,0 +1,81 @@
+﻿html, body, form
+{
+    padding: 0;
+    margin: 0;
+}
+
+body 
+{
+    background-color:White !important;
+    height:100%;
+}
+
+h1
+{
+    font-size: 14pt;
+    margin: 8px 0px;
+    padding: 8px 0px;
+    border-bottom: 1px dotted #eeeeee;
+}
+
+#boHeader 
+{    
+    height: 85px;
+    background-color: #9dacb5;
+    background-position: right top;
+    background-repeat: no-repeat;
+    border-bottom:2px solid DarkOrange;
+    padding-bottom:5px;
+    padding:25px 15px 10px 25px;
+    color:#304050;
+}
+
+#boUserServices 
+{
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+#mainContent 
+{
+    background-color:White;
+}
+
+#boMain 
+{
+    padding: 10px;
+}
+
+#boFooter 
+{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:none;
+    padding:3px 0 3px 0;
+    height:18px;
+    border-top:1px solid #888;
+    background-color:#eee;
+}
+
+#evdoxos-logo
+{
+    background-image: url(../_img/evdoxos_logo.png);
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 100px;   
+    float: left;
+    display: block;
+    text-decoration: none;
+}
+
+#grnet-logo
+{
+    background-image: url(../_img/grnet_logo.png);
+    background-repeat: no-repeat;    
+    float: right;
+    display: block;
+    text-decoration: none;
+}

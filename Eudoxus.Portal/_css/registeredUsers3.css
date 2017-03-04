@@ -1,0 +1,201 @@
+﻿*
+{
+    font-family: Tahoma, Arial, Sans-Serif;
+    font-size: 10pt;
+}
+
+h1
+{
+    font-size: 14pt;
+    margin: 8px 0px;
+    padding: 8px 0px;
+    border-bottom: 1px dotted #eeeeee;
+}
+
+h3
+{
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 16px auto 4px auto;
+    padding: 0px;
+}
+
+body
+{
+    background-color: #9dacb5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#header
+{
+    height: 100px;
+    width: 930px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 5px 15px 30px 15px;
+    background-color: #FFFFFF;
+    background-position: right top;
+    background-repeat: no-repeat;
+    border: 1px solid gray;
+    border-bottom: 0px solid gray;
+}
+
+
+
+#headerTitle
+{
+    font-family: Tahoma, "Trebuchet MS" !important;
+    font-size: 19px;
+    color: #405060;
+    top: 55px;
+    left: 105px;
+    position: relative;
+    white-space: nowrap;
+    width: 310px;
+    margin: auto;
+}
+
+#container
+{
+    width: 930px;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid gray;
+    background: white;
+}
+
+#footer
+{
+    font-family: Tahoma, Arial, Sans-Serif;
+    font-size: 11px;
+    color: Black;
+    text-align: right;
+    width: 930px;
+    height: 70px;
+    margin: auto;
+    padding: 15px;
+    background-color: White;
+}
+
+#footer img
+{   
+    margin-right: 2em;
+    float: left;
+}
+
+#evdoxos-logo
+{
+    background-image: url(../_img/evdoxos_logo.png);
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 100px;
+    float: left;
+    display: block;
+    text-decoration: none;
+}
+
+#grnet-logo
+{
+    background-image: url(../_img/grnet_logo.png);
+    background-repeat: no-repeat;
+    width: 310px;
+    height: 100px;
+    float: right;
+    display: block;
+    text-decoration: none;
+}
+
+div#login-area
+{
+    padding: 8px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+div#registeredUsers-menu
+{
+    padding: 8px 0px 8px 5px;
+    margin: 0px -16px 8px -16px;
+    font-size: 8pt;
+    border-bottom: 4px solid #5D7B9D;
+}
+
+div#registeredUsers-menu a
+{
+    background-color: #D3D3D3;
+    font-size: 8pt;
+    padding: 8px 8px 8px 8px;
+    margin: 0px;
+    color: black;
+    border-right: 1px solid white;
+    text-decoration: none;
+}
+
+div#registeredUsers-menu a:hover
+{
+    background-color: #5D7B9D;
+    color: white;
+}
+
+div#registeredUsers-menu a.active
+{
+    background-color: #5D7B9D;
+    color: white;
+}
+
+div#registeredUsers-menu span
+{
+    font-size: 8pt;
+    padding: 8px 2px;
+    margin: 0px;
+    color: white;
+    border-right: 1px solid white;
+    text-decoration: none;
+    background-color: White;
+}
+
+div#dottedBorder
+{
+    margin: 16px 0px 8px 0px;
+    padding: 4px;
+    border: 1px dotted #333;
+}
+
+.modalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalPopup
+{
+    background-color: white;
+    border-top: 3px solid gray;
+    border-left: 3px solid gray;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 8px;
+    width: 450px;
+}
+.modalPopup-cp
+{
+    background-color: white;
+    border-top: 3px solid gray;
+    border-left: 3px solid gray;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 16px;
+    width: 500px;
+}
+
+.invisible
+{
+    width: 0px;
+    height: 0px;
+    display: none;
+    visibility: hidden;
+}

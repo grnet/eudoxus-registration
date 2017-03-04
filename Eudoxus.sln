@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eudoxus.BusinessModel", "Eudoxus.BusinessModel\Eudoxus.BusinessModel.csproj", "{20DF662D-628F-47E5-A4F1-2934BD9E34D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eudoxus.eService", "Eudoxus.eService\Eudoxus.eService.csproj", "{9DFAE2ED-B745-4769-8B79-528A694F342A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eudoxus.Mails", "Eudoxus.Mails\Eudoxus.Mails.csproj", "{F1BE36BC-E66A-411E-8E22-96AC74536A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eudoxus.Portal", "Eudoxus.Portal\Eudoxus.Portal.csproj", "{E74C1E49-7737-48E8-B438-E1C126EAD31C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eudoxus.Queue", "Eudoxus.Queue\Eudoxus.Queue.csproj", "{D3F11CFD-5742-4906-9C79-F6E245364E03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eudoxus.Utils", "Eudoxus.Utils\Eudoxus.Utils.csproj", "{2A048A6E-5369-4F1B-B671-383F1B5F5359}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{D5A6E5A8-AA3D-4346-8DB2-EC37B314E34D}"
+	ProjectSection(SolutionItems) = preProject
+		lib\AjaxControlToolkit.dll = lib\AjaxControlToolkit.dll
+		lib\DevExpress.Data.v9.2.dll = lib\DevExpress.Data.v9.2.dll
+		lib\DevExpress.Utils.v9.2.dll = lib\DevExpress.Utils.v9.2.dll
+		lib\DevExpress.Web.ASPxEditors.v9.2.dll = lib\DevExpress.Web.ASPxEditors.v9.2.dll
+		lib\DevExpress.Web.ASPxGridView.v9.2.dll = lib\DevExpress.Web.ASPxGridView.v9.2.dll
+		lib\DevExpress.Web.ASPxGridView.v9.2.Export.dll = lib\DevExpress.Web.ASPxGridView.v9.2.Export.dll
+		lib\DevExpress.Web.ASPxHtmlEditor.v9.2.dll = lib\DevExpress.Web.ASPxHtmlEditor.v9.2.dll
+		lib\DevExpress.Web.v9.2.dll = lib\DevExpress.Web.v9.2.dll
+		lib\DevExpress.XtraPrinting.v9.2.dll = lib\DevExpress.XtraPrinting.v9.2.dll
+		lib\Dynamite.dll = lib\Dynamite.dll
+		lib\Imis.Domain.dll = lib\Imis.Domain.dll
+		lib\Imis.Domain.EF.dll = lib\Imis.Domain.EF.dll
+		lib\Imis.Web.Administration.dll = lib\Imis.Web.Administration.dll
+		lib\Imis.Web.Controls.dll = lib\Imis.Web.Controls.dll
+		lib\Lanap.BotDetect.dll = lib\Lanap.BotDetect.dll
+		lib\log4net.dll = lib\log4net.dll
+		lib\WebPageSecurity.dll = lib\WebPageSecurity.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Ifestion|Any CPU = Ifestion|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20DF662D-628F-47E5-A4F1-2934BD9E34D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20DF662D-628F-47E5-A4F1-2934BD9E34D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20DF662D-628F-47E5-A4F1-2934BD9E34D0}.Ifestion|Any CPU.ActiveCfg = Ifestion|Any CPU
+		{20DF662D-628F-47E5-A4F1-2934BD9E34D0}.Ifestion|Any CPU.Build.0 = Ifestion|Any CPU
+		{20DF662D-628F-47E5-A4F1-2934BD9E34D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20DF662D-628F-47E5-A4F1-2934BD9E34D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFAE2ED-B745-4769-8B79-528A694F342A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFAE2ED-B745-4769-8B79-528A694F342A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFAE2ED-B745-4769-8B79-528A694F342A}.Ifestion|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFAE2ED-B745-4769-8B79-528A694F342A}.Ifestion|Any CPU.Build.0 = Release|Any CPU
+		{9DFAE2ED-B745-4769-8B79-528A694F342A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFAE2ED-B745-4769-8B79-528A694F342A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BE36BC-E66A-411E-8E22-96AC74536A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BE36BC-E66A-411E-8E22-96AC74536A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BE36BC-E66A-411E-8E22-96AC74536A6B}.Ifestion|Any CPU.ActiveCfg = Ifestion|Any CPU
+		{F1BE36BC-E66A-411E-8E22-96AC74536A6B}.Ifestion|Any CPU.Build.0 = Ifestion|Any CPU
+		{F1BE36BC-E66A-411E-8E22-96AC74536A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BE36BC-E66A-411E-8E22-96AC74536A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74C1E49-7737-48E8-B438-E1C126EAD31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74C1E49-7737-48E8-B438-E1C126EAD31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74C1E49-7737-48E8-B438-E1C126EAD31C}.Ifestion|Any CPU.ActiveCfg = Ifestion|Any CPU
+		{E74C1E49-7737-48E8-B438-E1C126EAD31C}.Ifestion|Any CPU.Build.0 = Ifestion|Any CPU
+		{E74C1E49-7737-48E8-B438-E1C126EAD31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74C1E49-7737-48E8-B438-E1C126EAD31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F11CFD-5742-4906-9C79-F6E245364E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F11CFD-5742-4906-9C79-F6E245364E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F11CFD-5742-4906-9C79-F6E245364E03}.Ifestion|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F11CFD-5742-4906-9C79-F6E245364E03}.Ifestion|Any CPU.Build.0 = Release|Any CPU
+		{D3F11CFD-5742-4906-9C79-F6E245364E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F11CFD-5742-4906-9C79-F6E245364E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A048A6E-5369-4F1B-B671-383F1B5F5359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A048A6E-5369-4F1B-B671-383F1B5F5359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A048A6E-5369-4F1B-B671-383F1B5F5359}.Ifestion|Any CPU.ActiveCfg = Release|Any CPU
+		{2A048A6E-5369-4F1B-B671-383F1B5F5359}.Ifestion|Any CPU.Build.0 = Release|Any CPU
+		{2A048A6E-5369-4F1B-B671-383F1B5F5359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A048A6E-5369-4F1B-B671-383F1B5F5359}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

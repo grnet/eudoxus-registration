@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Admin/Default.aspx" title="Admin">
+    <siteMapNode url="~/Admin/SubSystemManagement.aspx" title="Διαχείριση Υποσυστημάτων" />
+    <siteMapNode url="~/Admin/IncidentTypeManagement.aspx" title="Διαχείριση Τύπων Συμβάντων" />
+    <siteMapNode url="~/Admin/AdminUsers.aspx" title="Διαχείριση Χρηστών" />
+    <!--<siteMapNode url="~/Admin/SendUpdatesToService.aspx" title="Αποστολή Εγγραφών στο e-service" />
+    <siteMapNode url="~/Admin/SendPublishersForPayment.aspx" title="Αποστολή Εκδοτών για πληρωμές" />
+    <siteMapNode url="~/Admin/ViewQueueEntries.aspx" title="Προβολή Queue" />-->
+  </siteMapNode>
+</siteMap>

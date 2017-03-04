@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20DF662D-628F-47E5-A4F1-2934BD9E34D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eudoxus.BusinessModel</RootNamespace>
+    <AssemblyName>Eudoxus.BusinessModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/HelpDesk.BusinessModel/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ifestion|AnyCPU'">
+    <OutputPath>bin\Ifestion\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\HelpDesk.BusinessModel.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dynamite">
+      <HintPath>..\lib\Dynamite.dll</HintPath>
+    </Reference>
+    <Reference Include="Imis.Domain">
+      <HintPath>..\lib\Imis.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Imis.Domain.EF">
+      <HintPath>..\lib\Imis.Domain.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\AcademicCacheManager.cs" />
+    <Compile Include="Caching\CityCacheManager.cs" />
+    <Compile Include="Caching\IncidentTypeCacheManager.cs" />
+    <Compile Include="Caching\InstitutionCacheManager.cs" />
+    <Compile Include="Caching\PrefectureCacheManager.cs" />
+    <Compile Include="Caching\RegionCacheManager.cs" />
+    <Compile Include="Caching\ReporterIncidentTypeCacheManager.cs" />
+    <Compile Include="Caching\SubSystemCacheManager.cs" />
+    <Compile Include="Caching\SubSystemReporterTypeCacheManager.cs" />
+    <Compile Include="Classes\DOY.cs" />
+    <Compile Include="Classes\GenericQueueData.cs" />
+    <Compile Include="Classes\IdentificationDetails.cs" />
+    <Compile Include="Classes\QueueWorker.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Entities\BookSupplier.cs" />
+    <Compile Include="Entities\BookSupplierDetails.cs" />
+    <Compile Include="Entities\BookSupplierDetailsView.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\DataCenter.cs" />
+    <Compile Include="Entities\DataCenterDetailsView.cs" />
+    <Compile Include="Entities\Dispatch.cs" />
+    <Compile Include="Entities\DistributionPoint.cs" />
+    <Compile Include="Entities\DistributionPointDetailsView.cs" />
+    <Compile Include="Entities\HelpDeskEntities.cs" />
+    <Compile Include="Entities\IncidentReport.cs" />
+    <Compile Include="Entities\IncidentReportPost.cs" />
+    <Compile Include="Entities\Institution.cs" />
+    <Compile Include="Entities\Library.cs" />
+    <Compile Include="Entities\LibraryDetailsView.cs" />
+    <Compile Include="Entities\MinistryPaymentsUser.cs" />
+    <Compile Include="Entities\Online.cs" />
+    <Compile Include="Entities\PricingCommittee.cs" />
+    <Compile Include="Entities\Professor.cs" />
+    <Compile Include="Entities\PublicationsOffice.cs" />
+    <Compile Include="Entities\PublicationsOfficeDetailsView.cs" />
+    <Compile Include="Entities\PublisherDetails.cs" />
+    <Compile Include="Entities\QueueEntry.cs" />
+    <Compile Include="Entities\Reporter.cs" />
+    <Compile Include="Entities\ReporterIncidentType.cs" />
+    <Compile Include="Entities\Secretary.cs" />
+    <Compile Include="Entities\Publisher.cs" />
+    <Compile Include="Entities\SecretaryDetails.cs" />
+    <Compile Include="Entities\SecretaryDetailsView.cs" />
+    <Compile Include="Entities\SubSystemReporterType.cs" />
+    <Compile Include="Entities\Unknown.cs" />
+    <Compile Include="Enums\enCallType.cs" />
+    <Compile Include="Enums\enCertifierType.cs" />
+    <Compile Include="Enums\enDirectorType.cs" />
+    <Compile Include="Enums\enDispatchType.cs" />
+    <Compile Include="Enums\enDistributionPointType.cs" />
+    <Compile Include="Enums\enHandlerStatus.cs" />
+    <Compile Include="Enums\enHandlerType.cs" />
+    <Compile Include="Enums\enIdentificationType.cs" />
+    <Compile Include="Enums\enInstitutionType.cs" />
+    <Compile Include="Enums\enMinistryAuthorization.cs" />
+    <Compile Include="Enums\enReporterType.cs" />
+    <Compile Include="Enums\enReportStatus.cs" />
+    <Compile Include="Enums\enPublisherType.cs" />
+    <Compile Include="Enums\enReportSubmissionType.cs" />
+    <Compile Include="Enums\enRepresentativeType.cs" />
+    <Compile Include="Enums\EnumExtensions.cs" />
+    <Compile Include="Enums\enVerificationStatus.cs" />
+    <Compile Include="HelpdeskNew.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpdeskNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskViews.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpDeskViews.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IUserChangeTracking.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AcademicDetailRepository.cs" />
+    <Compile Include="Repositories\AcademicRepository.cs" />
+    <Compile Include="Repositories\AcademicsToAddRepository.cs" />
+    <Compile Include="Repositories\AcademicsToCloneRepository.cs" />
+    <Compile Include="Repositories\AdminUserRepository.cs" />
+    <Compile Include="Repositories\BookSupplierDetailsViewRepository.cs" />
+    <Compile Include="Repositories\BookSupplierRepository.cs" />
+    <Compile Include="Repositories\CityRepository.cs" />
+    <Compile Include="Repositories\DataCenterDetailsViewRepository.cs" />
+    <Compile Include="Repositories\DataCenterRepository.cs" />
+    <Compile Include="Repositories\DistributionPointDetailsViewRepository.cs" />
+    <Compile Include="Repositories\DistributionPointRepository.cs" />
+    <Compile Include="Repositories\HelpdeskUserRepository.cs" />
+    <Compile Include="Repositories\IncidentReportDetailsViewRepository.cs" />
+    <Compile Include="Repositories\IncidentReportPostRepository.cs" />
+    <Compile Include="Repositories\IncidentReportRepository.cs" />
+    <Compile Include="Repositories\IncidentTypeRepository.cs" />
+    <Compile Include="Repositories\InstitutionRepository.cs" />
+    <Compile Include="Repositories\LessonReportRepository.cs" />
+    <Compile Include="Repositories\LibraryDetailsViewRepository.cs" />
+    <Compile Include="Repositories\LibraryRepository.cs" />
+    <Compile Include="Repositories\MinistryPaymentsUserRepository.cs" />
+    <Compile Include="Repositories\NewAcademicRepository.cs" />
+    <Compile Include="Repositories\NewInstitutionRepository.cs" />
+    <Compile Include="Repositories\PrefectureRepository.cs" />
+    <Compile Include="Repositories\PricingCommitteeRepository.cs" />
+    <Compile Include="Repositories\PublicationsOfficeRepository.cs" />
+    <Compile Include="Repositories\PublicationsOfficeDetailsViewRepository.cs" />
+    <Compile Include="Repositories\QueueEntryRepository.cs" />
+    <Compile Include="Repositories\RegionRepository.cs" />
+    <Compile Include="Repositories\ReporterRepository.cs" />
+    <Compile Include="Repositories\SecretaryDetailsViewRepository.cs" />
+    <Compile Include="Repositories\SecretaryRepository.cs" />
+    <Compile Include="Repositories\PublisherRepository.cs" />
+    <Compile Include="Repositories\SubSystemRepository.cs" />
+    <Compile Include="Resources\Labels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Labels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\AcademicDetailCriteria.cs" />
+    <Compile Include="Search\Criteria.cs" />
+    <Compile Include="Search\CriteriaField.cs" />
+    <Compile Include="Search\IncidentReportCriteria.cs" />
+    <Compile Include="Search\LessonReportCriteria.cs" />
+    <Compile Include="Search\ReporterCriteria.cs" />
+    <Compile Include="ServiceWorker.cs" />
+    <Compile Include="UnitOfWorkFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="HelpDesk.edmx">
+      <LastGenOutput>HelpDesk.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HelpdeskNew.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HelpdeskNew.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="HelpDeskViews.edmx" />
+    <None Include="HelpDeskViews.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HelpDeskViews.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\HelpDeskEntities.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Labels.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DOYs.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eudoxus.eService\Eudoxus.eService.csproj">
+      <Project>{9DFAE2ED-B745-4769-8B79-528A694F342A}</Project>
+      <Name>Eudoxus.eService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eudoxus.Queue\Eudoxus.Queue.csproj">
+      <Project>{D3F11CFD-5742-4906-9C79-F6E245364E03}</Project>
+      <Name>Eudoxus.Queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eudoxus.Utils\Eudoxus.Utils.csproj">
+      <Project>{2A048A6E-5369-4F1B-B671-383F1B5F5359}</Project>
+      <Name>Eudoxus.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

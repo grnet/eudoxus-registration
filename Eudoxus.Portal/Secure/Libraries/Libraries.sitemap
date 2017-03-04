@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Secure/Libraries" title="Default" roles="LibraryUser">
+        <siteMapNode url="~/Secure/Libraries/Default.aspx" title="Κεντρική Σελίδα" />
+        <siteMapNode url="~/Secure/Libraries/LibraryDetails.aspx" title="Στοιχεία Βιβλιοθήκης" />
+        <siteMapNode url="~/Secure/Libraries/DistributionPointCreation.aspx" title="Δημιουργία Σημείου Διανομής" />
+        <siteMapNode url="~/Secure/Libraries/HelpdeskContact.aspx" title="Επικοινωνία με Γραφείο Αρωγής" />
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Secure/DistributionPoints" title="Default" roles="DistributionPointUser">
+        <siteMapNode url="~/Secure/DistributionPoints/Default.aspx" title="Κεντρική Σελίδα" />
+        <siteMapNode url="~/Secure/DistributionPoints/DistributionPointDetails.aspx" title="Στοιχεία Σημείου Διανομής" />
+        <siteMapNode url="~/Secure/DistributionPoints/HelpdeskContact.aspx" title="Επικοινωνία με Γραφείο Αρωγής" />
+    </siteMapNode>
+</siteMap>

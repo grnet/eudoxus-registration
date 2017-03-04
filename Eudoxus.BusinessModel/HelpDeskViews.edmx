@@ -1,0 +1,2147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Eudoxus.BusinessModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EudoxusBusinessModelStoreContainer">
+          <EntitySet Name="vBookSupplier" EntityType="Eudoxus.BusinessModel.Store.vBookSupplier" store:Type="Views" store:Schema="dbo" store:Name="vBookSupplier">
+            <DefiningQuery>SELECT 
+      [vBookSupplier].[ID] AS [ID], 
+      [vBookSupplier].[InstitutionID] AS [InstitutionID], 
+      [vBookSupplier].[CertifierType] AS [CertifierType], 
+      [vBookSupplier].[CertifierName] AS [CertifierName], 
+      [vBookSupplier].[BookSupplierAddress] AS [BookSupplierAddress], 
+      [vBookSupplier].[BookSupplierZipCode] AS [BookSupplierZipCode], 
+      [vBookSupplier].[CityID] AS [CityID], 
+      [vBookSupplier].[PrefectureID] AS [PrefectureID], 
+      [vBookSupplier].[ContactName] AS [ContactName], 
+      [vBookSupplier].[ContactPhone] AS [ContactPhone], 
+      [vBookSupplier].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vBookSupplier].[ContactEmail] AS [ContactEmail], 
+      [vBookSupplier].[AlternateContactName] AS [AlternateContactName], 
+      [vBookSupplier].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vBookSupplier].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vBookSupplier].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vBookSupplier].[UserName] AS [UserName], 
+      [vBookSupplier].[Password] AS [Password], 
+      [vBookSupplier].[PasswordSalt] AS [PasswordSalt], 
+      [vBookSupplier].[Email] AS [Email], 
+      [vBookSupplier].[IsActivated] AS [IsActivated], 
+      [vBookSupplier].[VerificationStatus] AS [VerificationStatus]
+      FROM [dbo].[vBookSupplier] AS [vBookSupplier]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vBookSupplierDetails" EntityType="Eudoxus.BusinessModel.Store.vBookSupplierDetails" store:Type="Views" store:Schema="dbo" store:Name="vBookSupplierDetails">
+            <DefiningQuery>SELECT 
+      [vBookSupplierDetails].[ID] AS [ID], 
+      [vBookSupplierDetails].[RegistrationDate] AS [RegistrationDate], 
+      [vBookSupplierDetails].[VerificationStatus] AS [VerificationStatus], 
+      [vBookSupplierDetails].[VerificationDate] AS [VerificationDate], 
+      [vBookSupplierDetails].[BookSupplierInstitutionID] AS [BookSupplierInstitutionID], 
+      [vBookSupplierDetails].[CertifierType] AS [CertifierType], 
+      [vBookSupplierDetails].[CertifierName] AS [CertifierName], 
+      [vBookSupplierDetails].[BookSupplierAddress] AS [BookSupplierAddress], 
+      [vBookSupplierDetails].[BookSupplierZipCode] AS [BookSupplierZipCode], 
+      [vBookSupplierDetails].[BookSupplierCityID] AS [BookSupplierCityID], 
+      [vBookSupplierDetails].[BookSupplierPrefectureID] AS [BookSupplierPrefectureID], 
+      [vBookSupplierDetails].[ContactName] AS [ContactName], 
+      [vBookSupplierDetails].[ContactPhone] AS [ContactPhone], 
+      [vBookSupplierDetails].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vBookSupplierDetails].[ContactEmail] AS [ContactEmail], 
+      [vBookSupplierDetails].[AlternateContactName] AS [AlternateContactName], 
+      [vBookSupplierDetails].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vBookSupplierDetails].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vBookSupplierDetails].[AlternateContactEmail] AS [AlternateContactEmail]
+      FROM [dbo].[vBookSupplierDetails] AS [vBookSupplierDetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vDataCenter" EntityType="Eudoxus.BusinessModel.Store.vDataCenter" store:Type="Views" store:Schema="dbo" store:Name="vDataCenter">
+            <DefiningQuery>SELECT 
+      [vDataCenter].[ID] AS [ID], 
+      [vDataCenter].[InstitutionID] AS [InstitutionID], 
+      [vDataCenter].[DirectorName] AS [DirectorName], 
+      [vDataCenter].[DataCenterPhone] AS [DataCenterPhone], 
+      [vDataCenter].[DataCenterEmail] AS [DataCenterEmail], 
+      [vDataCenter].[DataCenterAddress] AS [DataCenterAddress], 
+      [vDataCenter].[DataCenterZipCode] AS [DataCenterZipCode], 
+      [vDataCenter].[CityID] AS [CityID], 
+      [vDataCenter].[PrefectureID] AS [PrefectureID], 
+      [vDataCenter].[ContactName] AS [ContactName], 
+      [vDataCenter].[ContactPhone] AS [ContactPhone], 
+      [vDataCenter].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vDataCenter].[ContactEmail] AS [ContactEmail], 
+      [vDataCenter].[AlternateContactName] AS [AlternateContactName], 
+      [vDataCenter].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vDataCenter].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vDataCenter].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vDataCenter].[UserName] AS [UserName], 
+      [vDataCenter].[Password] AS [Password], 
+      [vDataCenter].[PasswordSalt] AS [PasswordSalt], 
+      [vDataCenter].[Email] AS [Email], 
+      [vDataCenter].[IsActivated] AS [IsActivated], 
+      [vDataCenter].[VerificationStatus] AS [VerificationStatus]
+      FROM [dbo].[vDataCenter] AS [vDataCenter]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vDataCenterDetails" EntityType="Eudoxus.BusinessModel.Store.vDataCenterDetails" store:Type="Views" store:Schema="dbo" store:Name="vDataCenterDetails">
+            <DefiningQuery>SELECT 
+      [vDataCenterDetails].[ID] AS [ID], 
+      [vDataCenterDetails].[RegistrationDate] AS [RegistrationDate], 
+      [vDataCenterDetails].[VerificationStatus] AS [VerificationStatus], 
+      [vDataCenterDetails].[VerificationDate] AS [VerificationDate], 
+      [vDataCenterDetails].[DataCenterInstitutionID] AS [DataCenterInstitutionID], 
+      [vDataCenterDetails].[DataCenterPhone] AS [DataCenterPhone], 
+      [vDataCenterDetails].[DataCenterEmail] AS [DataCenterEmail], 
+      [vDataCenterDetails].[DirectorName] AS [DirectorName], 
+      [vDataCenterDetails].[DataCenterAddress] AS [DataCenterAddress], 
+      [vDataCenterDetails].[DataCenterZipCode] AS [DataCenterZipCode], 
+      [vDataCenterDetails].[DataCenterCityID] AS [DataCenterCityID], 
+      [vDataCenterDetails].[DataCenterPrefectureID] AS [DataCenterPrefectureID], 
+      [vDataCenterDetails].[ContactName] AS [ContactName], 
+      [vDataCenterDetails].[ContactPhone] AS [ContactPhone], 
+      [vDataCenterDetails].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vDataCenterDetails].[ContactEmail] AS [ContactEmail], 
+      [vDataCenterDetails].[AlternateContactName] AS [AlternateContactName], 
+      [vDataCenterDetails].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vDataCenterDetails].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vDataCenterDetails].[AlternateContactEmail] AS [AlternateContactEmail]
+      FROM [dbo].[vDataCenterDetails] AS [vDataCenterDetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vDistributionPoint" EntityType="Eudoxus.BusinessModel.Store.vDistributionPoint" store:Type="Views" store:Schema="dbo" store:Name="vDistributionPoint">
+            <DefiningQuery>SELECT 
+      [vDistributionPoint].[ID] AS [ID], 
+      [vDistributionPoint].[DistributionPointName] AS [DistributionPointName], 
+      [vDistributionPoint].[DistributionPointType] AS [DistributionPointType], 
+      [vDistributionPoint].[DistributionPointInstitutionID] AS [DistributionPointInstitutionID], 
+      [vDistributionPoint].[DistributionPointOpeningHours] AS [DistributionPointOpeningHours], 
+      [vDistributionPoint].[DistributionPointPhone] AS [DistributionPointPhone], 
+      [vDistributionPoint].[DistributionPointMobilePhone] AS [DistributionPointMobilePhone], 
+      [vDistributionPoint].[DistributionPointFax] AS [DistributionPointFax], 
+      [vDistributionPoint].[DistributionPointEmail] AS [DistributionPointEmail], 
+      [vDistributionPoint].[DistributionPointAddress] AS [DistributionPointAddress], 
+      [vDistributionPoint].[DistributionPointZipCode] AS [DistributionPointZipCode], 
+      [vDistributionPoint].[DistributionPointCityID] AS [DistributionPointCityID], 
+      [vDistributionPoint].[DistributionPointPrefectureID] AS [DistributionPointPrefectureID], 
+      [vDistributionPoint].[DistributionPointLocationURL] AS [DistributionPointLocationURL], 
+      [vDistributionPoint].[ContactName] AS [ContactName], 
+      [vDistributionPoint].[ContactPhone] AS [ContactPhone], 
+      [vDistributionPoint].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vDistributionPoint].[ContactEmail] AS [ContactEmail], 
+      [vDistributionPoint].[UserName] AS [UserName], 
+      [vDistributionPoint].[Password] AS [Password], 
+      [vDistributionPoint].[PasswordSalt] AS [PasswordSalt], 
+      [vDistributionPoint].[Email] AS [Email], 
+      [vDistributionPoint].[IsActivated] AS [IsActivated], 
+      [vDistributionPoint].[VerificationStatus] AS [VerificationStatus]
+      FROM [dbo].[vDistributionPoint] AS [vDistributionPoint]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vDistributionPointDetails" EntityType="Eudoxus.BusinessModel.Store.vDistributionPointDetails" store:Type="Views" store:Schema="dbo" store:Name="vDistributionPointDetails">
+            <DefiningQuery>SELECT 
+      [vDistributionPointDetails].[ID] AS [ID], 
+      [vDistributionPointDetails].[RegistrationDate] AS [RegistrationDate], 
+      [vDistributionPointDetails].[VerificationStatus] AS [VerificationStatus], 
+      [vDistributionPointDetails].[VerificationDate] AS [VerificationDate], 
+      [vDistributionPointDetails].[DistributionPointName] AS [DistributionPointName], 
+      [vDistributionPointDetails].[DistributionPointType] AS [DistributionPointType], 
+      [vDistributionPointDetails].[DistributionPointInstitutionID] AS [DistributionPointInstitutionID], 
+      [vDistributionPointDetails].[DistributionPointOpeningHours] AS [DistributionPointOpeningHours], 
+      [vDistributionPointDetails].[DistributionPointLocationURL] AS [DistributionPointLocationURL], 
+      [vDistributionPointDetails].[DistributionPointPhone] AS [DistributionPointPhone], 
+      [vDistributionPointDetails].[DistributionPointMobilePhone] AS [DistributionPointMobilePhone], 
+      [vDistributionPointDetails].[DistributionPointFax] AS [DistributionPointFax], 
+      [vDistributionPointDetails].[DistributionPointEmail] AS [DistributionPointEmail], 
+      [vDistributionPointDetails].[DistributionPointURL] AS [DistributionPointURL], 
+      [vDistributionPointDetails].[DistributionPointAddress] AS [DistributionPointAddress], 
+      [vDistributionPointDetails].[DistributionPointZipCode] AS [DistributionPointZipCode], 
+      [vDistributionPointDetails].[DistributionPointCityID] AS [DistributionPointCityID], 
+      [vDistributionPointDetails].[DistributionPointPrefectureID] AS [DistributionPointPrefectureID], 
+      [vDistributionPointDetails].[ContactName] AS [ContactName], 
+      [vDistributionPointDetails].[ContactPhone] AS [ContactPhone], 
+      [vDistributionPointDetails].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vDistributionPointDetails].[ContactEmail] AS [ContactEmail]
+      FROM [dbo].[vDistributionPointDetails] AS [vDistributionPointDetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vIncidentReportDetails" EntityType="Eudoxus.BusinessModel.Store.vIncidentReportDetails" store:Type="Views" store:Schema="dbo" store:Name="vIncidentReportDetails">
+            <DefiningQuery>SELECT 
+      [vIncidentReportDetails].[ID] AS [ID], 
+      [vIncidentReportDetails].[CreatedAt] AS [CreatedAt], 
+      [vIncidentReportDetails].[CreatedBy] AS [CreatedBy], 
+      [vIncidentReportDetails].[IncidentCallType] AS [IncidentCallType], 
+      [vIncidentReportDetails].[ReporterType] AS [ReporterType], 
+      [vIncidentReportDetails].[StudentInstitution] AS [StudentInstitution], 
+      [vIncidentReportDetails].[StudentSchool] AS [StudentSchool], 
+      [vIncidentReportDetails].[StudentDepartment] AS [StudentDepartment], 
+      [vIncidentReportDetails].[OnlineReport] AS [OnlineReport], 
+      [vIncidentReportDetails].[IncidentType] AS [IncidentType], 
+      [vIncidentReportDetails].[ReportText] AS [ReportText], 
+      [vIncidentReportDetails].[AnsweredAt] AS [AnsweredAt], 
+      [vIncidentReportDetails].[AnsweredBy] AS [AnsweredBy], 
+      [vIncidentReportDetails].[AnswerCallType] AS [AnswerCallType], 
+      [vIncidentReportDetails].[AnswerText] AS [AnswerText]
+      FROM [dbo].[vIncidentReportDetails] AS [vIncidentReportDetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vLibrary" EntityType="Eudoxus.BusinessModel.Store.vLibrary" store:Type="Views" store:Schema="dbo" store:Name="vLibrary">
+            <DefiningQuery>SELECT 
+      [vLibrary].[ID] AS [ID], 
+      [vLibrary].[InstitutionID] AS [InstitutionID], 
+      [vLibrary].[LibraryName] AS [LibraryName], 
+      [vLibrary].[LibraryOpeningHours] AS [LibraryOpeningHours], 
+      [vLibrary].[DirectorName] AS [DirectorName], 
+      [vLibrary].[LibraryPhone] AS [LibraryPhone], 
+      [vLibrary].[LibraryEmail] AS [LibraryEmail], 
+      [vLibrary].[LibraryURL] AS [LibraryURL], 
+      [vLibrary].[LibraryAddress] AS [LibraryAddress], 
+      [vLibrary].[LibraryZipCode] AS [LibraryZipCode], 
+      [vLibrary].[CityID] AS [CityID], 
+      [vLibrary].[PrefectureID] AS [PrefectureID], 
+      [vLibrary].[LibraryLocationURL] AS [LibraryLocationURL], 
+      [vLibrary].[ContactName] AS [ContactName], 
+      [vLibrary].[ContactPhone] AS [ContactPhone], 
+      [vLibrary].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vLibrary].[ContactEmail] AS [ContactEmail], 
+      [vLibrary].[AlternateContactName] AS [AlternateContactName], 
+      [vLibrary].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vLibrary].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vLibrary].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vLibrary].[UserName] AS [UserName], 
+      [vLibrary].[Password] AS [Password], 
+      [vLibrary].[PasswordSalt] AS [PasswordSalt], 
+      [vLibrary].[Email] AS [Email], 
+      [vLibrary].[IsActivated] AS [IsActivated], 
+      [vLibrary].[VerificationStatus] AS [VerificationStatus]
+      FROM [dbo].[vLibrary] AS [vLibrary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vLibraryDetails" EntityType="Eudoxus.BusinessModel.Store.vLibraryDetails" store:Type="Views" store:Schema="dbo" store:Name="vLibraryDetails">
+            <DefiningQuery>SELECT 
+      [vLibraryDetails].[ID] AS [ID], 
+      [vLibraryDetails].[RegistrationDate] AS [RegistrationDate], 
+      [vLibraryDetails].[VerificationStatus] AS [VerificationStatus], 
+      [vLibraryDetails].[VerificationDate] AS [VerificationDate], 
+      [vLibraryDetails].[LibraryInstitutionID] AS [LibraryInstitutionID], 
+      [vLibraryDetails].[LibraryName] AS [LibraryName], 
+      [vLibraryDetails].[LibraryOpeningHours] AS [LibraryOpeningHours], 
+      [vLibraryDetails].[LibraryPhone] AS [LibraryPhone], 
+      [vLibraryDetails].[LibraryEmail] AS [LibraryEmail], 
+      [vLibraryDetails].[LibraryURL] AS [LibraryURL], 
+      [vLibraryDetails].[DirectorName] AS [DirectorName], 
+      [vLibraryDetails].[LibraryAddress] AS [LibraryAddress], 
+      [vLibraryDetails].[LibraryZipCode] AS [LibraryZipCode], 
+      [vLibraryDetails].[LibraryCityID] AS [LibraryCityID], 
+      [vLibraryDetails].[LibraryPrefectureID] AS [LibraryPrefectureID], 
+      [vLibraryDetails].[LibraryLocationURL] AS [LibraryLocationURL], 
+      [vLibraryDetails].[ContactName] AS [ContactName], 
+      [vLibraryDetails].[ContactPhone] AS [ContactPhone], 
+      [vLibraryDetails].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vLibraryDetails].[ContactEmail] AS [ContactEmail], 
+      [vLibraryDetails].[AlternateContactName] AS [AlternateContactName], 
+      [vLibraryDetails].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vLibraryDetails].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vLibraryDetails].[AlternateContactEmail] AS [AlternateContactEmail]
+      FROM [dbo].[vLibraryDetails] AS [vLibraryDetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vMinistryPaymentsUser" EntityType="Eudoxus.BusinessModel.Store.vMinistryPaymentsUser" store:Type="Views" store:Schema="dbo" store:Name="vMinistryPaymentsUser">
+            <DefiningQuery>SELECT 
+      [vMinistryPaymentsUser].[ID] AS [ID], 
+      [vMinistryPaymentsUser].[Description] AS [Description], 
+      [vMinistryPaymentsUser].[ContactName] AS [ContactName], 
+      [vMinistryPaymentsUser].[ContactPhone] AS [ContactPhone], 
+      [vMinistryPaymentsUser].[ContactEmail] AS [ContactEmail], 
+      [vMinistryPaymentsUser].[MinistryAuthorization] AS [MinistryAuthorization], 
+      [vMinistryPaymentsUser].[UserName] AS [UserName], 
+      [vMinistryPaymentsUser].[Password] AS [Password], 
+      [vMinistryPaymentsUser].[PasswordSalt] AS [PasswordSalt], 
+      [vMinistryPaymentsUser].[Email] AS [Email], 
+      [vMinistryPaymentsUser].[IsActivated] AS [IsActivated], 
+      [vMinistryPaymentsUser].[VerificationStatus] AS [VerificationStatus], 
+      [vMinistryPaymentsUser].[VerificationDate] AS [VerificationDate]
+      FROM [dbo].[vMinistryPaymentsUser] AS [vMinistryPaymentsUser]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vPricingCommittee" EntityType="Eudoxus.BusinessModel.Store.vPricingCommittee" store:Type="Views" store:Schema="dbo" store:Name="vPricingCommittee">
+            <DefiningQuery>SELECT 
+      [vPricingCommittee].[ID] AS [ID], 
+      [vPricingCommittee].[PricingCommitteeType] AS [PricingCommitteeType], 
+      [vPricingCommittee].[ContactName] AS [ContactName], 
+      [vPricingCommittee].[ContactPhone] AS [ContactPhone], 
+      [vPricingCommittee].[ContactEmail] AS [ContactEmail], 
+      [vPricingCommittee].[PricingCommitteeAuthorization] AS [PricingCommitteeAuthorization], 
+      [vPricingCommittee].[UserName] AS [UserName], 
+      [vPricingCommittee].[Password] AS [Password], 
+      [vPricingCommittee].[PasswordSalt] AS [PasswordSalt], 
+      [vPricingCommittee].[Email] AS [Email], 
+      [vPricingCommittee].[IsActivated] AS [IsActivated], 
+      [vPricingCommittee].[VerificationStatus] AS [VerificationStatus], 
+      [vPricingCommittee].[VerificationDate] AS [VerificationDate]
+      FROM [dbo].[vPricingCommittee] AS [vPricingCommittee]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vPublicationsOffice" EntityType="Eudoxus.BusinessModel.Store.vPublicationsOffice" store:Type="Views" store:Schema="dbo" store:Name="vPublicationsOffice">
+            <DefiningQuery>SELECT 
+      [vPublicationsOffice].[ID] AS [ID], 
+      [vPublicationsOffice].[InstitutionID] AS [InstitutionID], 
+      [vPublicationsOffice].[DirectorName] AS [DirectorName], 
+      [vPublicationsOffice].[PublicationsOfficePhone] AS [PublicationsOfficePhone], 
+      [vPublicationsOffice].[PublicationsOfficeEmail] AS [PublicationsOfficeEmail], 
+      [vPublicationsOffice].[PublicationsOfficeAddress] AS [PublicationsOfficeAddress], 
+      [vPublicationsOffice].[PublicationsOfficeZipCode] AS [PublicationsOfficeZipCode], 
+      [vPublicationsOffice].[CityID] AS [CityID], 
+      [vPublicationsOffice].[PrefectureID] AS [PrefectureID], 
+      [vPublicationsOffice].[ContactName] AS [ContactName], 
+      [vPublicationsOffice].[ContactPhone] AS [ContactPhone], 
+      [vPublicationsOffice].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vPublicationsOffice].[ContactEmail] AS [ContactEmail], 
+      [vPublicationsOffice].[AlternateContactName] AS [AlternateContactName], 
+      [vPublicationsOffice].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vPublicationsOffice].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vPublicationsOffice].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vPublicationsOffice].[UserName] AS [UserName], 
+      [vPublicationsOffice].[Password] AS [Password], 
+      [vPublicationsOffice].[PasswordSalt] AS [PasswordSalt], 
+      [vPublicationsOffice].[Email] AS [Email], 
+      [vPublicationsOffice].[IsActivated] AS [IsActivated], 
+      [vPublicationsOffice].[VerificationStatus] AS [VerificationStatus]
+      FROM [dbo].[vPublicationsOffice] AS [vPublicationsOffice]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vPublicationsOfficeDetails" EntityType="Eudoxus.BusinessModel.Store.vPublicationsOfficeDetails" store:Type="Views" store:Schema="dbo" store:Name="vPublicationsOfficeDetails">
+            <DefiningQuery>SELECT 
+      [vPublicationsOfficeDetails].[ID] AS [ID], 
+      [vPublicationsOfficeDetails].[RegistrationDate] AS [RegistrationDate], 
+      [vPublicationsOfficeDetails].[VerificationStatus] AS [VerificationStatus], 
+      [vPublicationsOfficeDetails].[VerificationDate] AS [VerificationDate], 
+      [vPublicationsOfficeDetails].[PublicationsOfficeInstitutionID] AS [PublicationsOfficeInstitutionID], 
+      [vPublicationsOfficeDetails].[PublicationsOfficePhone] AS [PublicationsOfficePhone], 
+      [vPublicationsOfficeDetails].[PublicationsOfficeEmail] AS [PublicationsOfficeEmail], 
+      [vPublicationsOfficeDetails].[DirectorName] AS [DirectorName], 
+      [vPublicationsOfficeDetails].[PublicationsOfficeAddress] AS [PublicationsOfficeAddress], 
+      [vPublicationsOfficeDetails].[PublicationsOfficeZipCode] AS [PublicationsOfficeZipCode], 
+      [vPublicationsOfficeDetails].[PublicationsOfficeCityID] AS [PublicationsOfficeCityID], 
+      [vPublicationsOfficeDetails].[PublicationsOfficePrefectureID] AS [PublicationsOfficePrefectureID], 
+      [vPublicationsOfficeDetails].[ContactName] AS [ContactName], 
+      [vPublicationsOfficeDetails].[ContactPhone] AS [ContactPhone], 
+      [vPublicationsOfficeDetails].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vPublicationsOfficeDetails].[ContactEmail] AS [ContactEmail], 
+      [vPublicationsOfficeDetails].[AlternateContactName] AS [AlternateContactName], 
+      [vPublicationsOfficeDetails].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vPublicationsOfficeDetails].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vPublicationsOfficeDetails].[AlternateContactEmail] AS [AlternateContactEmail]
+      FROM [dbo].[vPublicationsOfficeDetails] AS [vPublicationsOfficeDetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vPublisher" EntityType="Eudoxus.BusinessModel.Store.vPublisher" store:Type="Views" store:Schema="dbo" store:Name="vPublisher">
+            <DefiningQuery>SELECT 
+      [vPublisher].[ID] AS [ID], 
+      [vPublisher].[PublisherType] AS [PublisherType], 
+      [vPublisher].[PublisherName] AS [PublisherName], 
+      [vPublisher].[PublisherTradeName] AS [PublisherTradeName], 
+      [vPublisher].[PublisherAFM] AS [PublisherAFM], 
+      [vPublisher].[PublisherDOY] AS [PublisherDOY], 
+      [vPublisher].[PublisherPhone] AS [PublisherPhone], 
+      [vPublisher].[PublisherMobilePhone] AS [PublisherMobilePhone], 
+      [vPublisher].[PublisherFax] AS [PublisherFax], 
+      [vPublisher].[PublisherEmail] AS [PublisherEmail], 
+      [vPublisher].[PublisherURL] AS [PublisherURL], 
+      [vPublisher].[PublisherAddress] AS [PublisherAddress], 
+      [vPublisher].[PublisherZipCode] AS [PublisherZipCode], 
+      [vPublisher].[CityID] AS [CityID], 
+      [vPublisher].[PrefectureID] AS [PrefectureID], 
+      [vPublisher].[LegalPersonName] AS [LegalPersonName], 
+      [vPublisher].[LegalPersonPhone] AS [LegalPersonPhone], 
+      [vPublisher].[LegalPersonEmail] AS [LegalPersonEmail], 
+      [vPublisher].[LegalPersonIdentificationType] AS [LegalPersonIdentificationType], 
+      [vPublisher].[LegalPersonIdentificationNumber] AS [LegalPersonIdentificationNumber], 
+      [vPublisher].[LegalPersonIdentificationIssuer] AS [LegalPersonIdentificationIssuer], 
+      [vPublisher].[LegalPersonIdentificationIssueDate] AS [LegalPersonIdentificationIssueDate], 
+      [vPublisher].[SelfRepresented] AS [SelfRepresented], 
+      [vPublisher].[SelfPublisherIdentificationType] AS [SelfPublisherIdentificationType], 
+      [vPublisher].[SelfPublisherIdentificationNumber] AS [SelfPublisherIdentificationNumber], 
+      [vPublisher].[SelfPublisherIdentificationIssuer] AS [SelfPublisherIdentificationIssuer], 
+      [vPublisher].[SelfPublisherIdentificationIssueDate] AS [SelfPublisherIdentificationIssueDate], 
+      [vPublisher].[ContactName] AS [ContactName], 
+      [vPublisher].[ContactPhone] AS [ContactPhone], 
+      [vPublisher].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vPublisher].[ContactEmail] AS [ContactEmail], 
+      [vPublisher].[ContactIdentificationType] AS [ContactIdentificationType], 
+      [vPublisher].[ContactIdentificationNumber] AS [ContactIdentificationNumber], 
+      [vPublisher].[ContactIdentificationIssuer] AS [ContactIdentificationIssuer], 
+      [vPublisher].[ContactIdentificationIssueDate] AS [ContactIdentificationIssueDate], 
+      [vPublisher].[AlternateContactName] AS [AlternateContactName], 
+      [vPublisher].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vPublisher].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vPublisher].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vPublisher].[UserName] AS [UserName], 
+      [vPublisher].[Password] AS [Password], 
+      [vPublisher].[PasswordSalt] AS [PasswordSalt], 
+      [vPublisher].[Email] AS [Email], 
+      [vPublisher].[IsActivated] AS [IsActivated], 
+      [vPublisher].[VerificationStatus] AS [VerificationStatus], 
+      [vPublisher].[UpdatedAt] AS [UpdatedAt], 
+      [vPublisher].[VerificationDate] AS [VerificationDate]
+      FROM [dbo].[vPublisher] AS [vPublisher]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vRegisteredPublishers" EntityType="Eudoxus.BusinessModel.Store.vRegisteredPublishers" store:Type="Views" store:Schema="dbo" store:Name="vRegisteredPublishers">
+            <DefiningQuery>SELECT 
+      [vRegisteredPublishers].[RegistrationDate] AS [RegistrationDate], 
+      [vRegisteredPublishers].[IsActive] AS [IsActive], 
+      [vRegisteredPublishers].[VerificationStatus] AS [VerificationStatus], 
+      [vRegisteredPublishers].[VerificationDate] AS [VerificationDate], 
+      [vRegisteredPublishers].[PublisherID] AS [PublisherID], 
+      [vRegisteredPublishers].[PublisherType] AS [PublisherType], 
+      [vRegisteredPublishers].[PublisherName] AS [PublisherName], 
+      [vRegisteredPublishers].[PublisherTradeName] AS [PublisherTradeName], 
+      [vRegisteredPublishers].[PublisherAFM] AS [PublisherAFM], 
+      [vRegisteredPublishers].[PublisherAddress] AS [PublisherAddress], 
+      [vRegisteredPublishers].[PublisherZipCode] AS [PublisherZipCode], 
+      [vRegisteredPublishers].[PublisherCity] AS [PublisherCity], 
+      [vRegisteredPublishers].[PublisherPrefecture] AS [PublisherPrefecture], 
+      [vRegisteredPublishers].[LegalPersonName] AS [LegalPersonName], 
+      [vRegisteredPublishers].[LegalPersonPhone] AS [LegalPersonPhone], 
+      [vRegisteredPublishers].[LegalPersonEmail] AS [LegalPersonEmail], 
+      [vRegisteredPublishers].[ContactName] AS [ContactName], 
+      [vRegisteredPublishers].[ContactPhone] AS [ContactPhone], 
+      [vRegisteredPublishers].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vRegisteredPublishers].[ContactEmail] AS [ContactEmail], 
+      [vRegisteredPublishers].[AlternateContactName] AS [AlternateContactName], 
+      [vRegisteredPublishers].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vRegisteredPublishers].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vRegisteredPublishers].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vRegisteredPublishers].[HasLogisticBooks] AS [HasLogisticBooks]
+      FROM [dbo].[vRegisteredPublishers] AS [vRegisteredPublishers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vSecretary" EntityType="Eudoxus.BusinessModel.Store.vSecretary" store:Type="Views" store:Schema="dbo" store:Name="vSecretary">
+            <DefiningQuery>SELECT 
+      [vSecretary].[ID] AS [ID], 
+      [vSecretary].[SecretaryAcademicID] AS [SecretaryAcademicID], 
+      [vSecretary].[RepresentativeType] AS [RepresentativeType], 
+      [vSecretary].[RepresentativeName] AS [RepresentativeName], 
+      [vSecretary].[SecretaryPhone] AS [SecretaryPhone], 
+      [vSecretary].[SecretaryEmail] AS [SecretaryEmail], 
+      [vSecretary].[SecretaryAddress] AS [SecretaryAddress], 
+      [vSecretary].[SecretaryZipCode] AS [SecretaryZipCode], 
+      [vSecretary].[SecretaryCityID] AS [SecretaryCityID], 
+      [vSecretary].[SecretaryPrefectureID] AS [SecretaryPrefectureID], 
+      [vSecretary].[ContactName] AS [ContactName], 
+      [vSecretary].[ContactPhone] AS [ContactPhone], 
+      [vSecretary].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vSecretary].[ContactEmail] AS [ContactEmail], 
+      [vSecretary].[AlternateContactName] AS [AlternateContactName], 
+      [vSecretary].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vSecretary].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vSecretary].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vSecretary].[Semesters] AS [Semesters], 
+      [vSecretary].[UserName] AS [UserName], 
+      [vSecretary].[Password] AS [Password], 
+      [vSecretary].[PasswordSalt] AS [PasswordSalt], 
+      [vSecretary].[Email] AS [Email], 
+      [vSecretary].[IsActivated] AS [IsActivated], 
+      [vSecretary].[VerificationStatus] AS [VerificationStatus]
+      FROM [dbo].[vSecretary] AS [vSecretary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vSecretaryDetails" EntityType="Eudoxus.BusinessModel.Store.vSecretaryDetails" store:Type="Views" store:Schema="dbo" store:Name="vSecretaryDetails">
+            <DefiningQuery>SELECT 
+      [vSecretaryDetails].[ID] AS [ID], 
+      [vSecretaryDetails].[RegistrationDate] AS [RegistrationDate], 
+      [vSecretaryDetails].[VerificationStatus] AS [VerificationStatus], 
+      [vSecretaryDetails].[VerificationDate] AS [VerificationDate], 
+      [vSecretaryDetails].[SecretaryAcademicID] AS [SecretaryAcademicID], 
+      [vSecretaryDetails].[SecretaryPhone] AS [SecretaryPhone], 
+      [vSecretaryDetails].[SecretaryEmail] AS [SecretaryEmail], 
+      [vSecretaryDetails].[RepresentativeType] AS [RepresentativeType], 
+      [vSecretaryDetails].[RepresentativeName] AS [RepresentativeName], 
+      [vSecretaryDetails].[SecretaryAddress] AS [SecretaryAddress], 
+      [vSecretaryDetails].[SecretaryZipCode] AS [SecretaryZipCode], 
+      [vSecretaryDetails].[SecretaryCityID] AS [SecretaryCityID], 
+      [vSecretaryDetails].[SecretaryPrefectureID] AS [SecretaryPrefectureID], 
+      [vSecretaryDetails].[ContactName] AS [ContactName], 
+      [vSecretaryDetails].[ContactPhone] AS [ContactPhone], 
+      [vSecretaryDetails].[ContactMobilePhone] AS [ContactMobilePhone], 
+      [vSecretaryDetails].[ContactEmail] AS [ContactEmail], 
+      [vSecretaryDetails].[AlternateContactName] AS [AlternateContactName], 
+      [vSecretaryDetails].[AlternateContactPhone] AS [AlternateContactPhone], 
+      [vSecretaryDetails].[AlternateContactMobilePhone] AS [AlternateContactMobilePhone], 
+      [vSecretaryDetails].[AlternateContactEmail] AS [AlternateContactEmail], 
+      [vSecretaryDetails].[Semesters] AS [Semesters]
+      FROM [dbo].[vSecretaryDetails] AS [vSecretaryDetails]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vBookSupplier' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vBookSupplier">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="InstitutionID" Type="int" />
+          <Property Name="CertifierType" Type="int" Nullable="false" />
+          <Property Name="CertifierName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="BookSupplierAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="BookSupplierZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="PrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vBookSupplierDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vBookSupplierDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+          <Property Name="BookSupplierInstitutionID" Type="int" />
+          <Property Name="CertifierType" Type="int" Nullable="false" />
+          <Property Name="CertifierName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="BookSupplierAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="BookSupplierZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="BookSupplierCityID" Type="int" Nullable="false" />
+          <Property Name="BookSupplierPrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vDataCenter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vDataCenter">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="InstitutionID" Type="int" />
+          <Property Name="DirectorName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DataCenterPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DataCenterEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="DataCenterAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DataCenterZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="PrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vDataCenterDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vDataCenterDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+          <Property Name="DataCenterInstitutionID" Type="int" />
+          <Property Name="DataCenterPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DataCenterEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="DirectorName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DataCenterAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DataCenterZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DataCenterCityID" Type="int" Nullable="false" />
+          <Property Name="DataCenterPrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vDistributionPoint' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vDistributionPoint">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="DistributionPointName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DistributionPointType" Type="int" />
+          <Property Name="DistributionPointInstitutionID" Type="int" />
+          <Property Name="DistributionPointOpeningHours" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="DistributionPointPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DistributionPointMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="DistributionPointFax" Type="nvarchar" MaxLength="10" />
+          <Property Name="DistributionPointEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="DistributionPointAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DistributionPointZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DistributionPointCityID" Type="int" Nullable="false" />
+          <Property Name="DistributionPointPrefectureID" Type="int" Nullable="false" />
+          <Property Name="DistributionPointLocationURL" Type="nvarchar(max)" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vDistributionPointDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vDistributionPointDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+          <Property Name="DistributionPointName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DistributionPointType" Type="int" />
+          <Property Name="DistributionPointInstitutionID" Type="int" />
+          <Property Name="DistributionPointOpeningHours" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="DistributionPointLocationURL" Type="nvarchar(max)" />
+          <Property Name="DistributionPointPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DistributionPointMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="DistributionPointFax" Type="nvarchar" MaxLength="10" />
+          <Property Name="DistributionPointEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="DistributionPointURL" Type="nvarchar" MaxLength="200" />
+          <Property Name="DistributionPointAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DistributionPointZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DistributionPointCityID" Type="int" Nullable="false" />
+          <Property Name="DistributionPointPrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vIncidentReportDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vIncidentReportDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IncidentCallType" Type="varchar" MaxLength="11" />
+          <Property Name="ReporterType" Type="varchar" MaxLength="31" />
+          <Property Name="StudentInstitution" Type="nvarchar" MaxLength="100" />
+          <Property Name="StudentSchool" Type="nvarchar" MaxLength="100" />
+          <Property Name="StudentDepartment" Type="nvarchar" MaxLength="100" />
+          <Property Name="OnlineReport" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="IncidentType" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ReportText" Type="nvarchar(max)" />
+          <Property Name="AnsweredAt" Type="datetime" />
+          <Property Name="AnsweredBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="AnswerCallType" Type="varchar" MaxLength="11" />
+          <Property Name="AnswerText" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vLibrary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vLibrary">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="InstitutionID" Type="int" />
+          <Property Name="LibraryName" Type="nvarchar" MaxLength="500" />
+          <Property Name="LibraryOpeningHours" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="DirectorName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="LibraryPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="LibraryEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LibraryURL" Type="nvarchar" MaxLength="200" />
+          <Property Name="LibraryAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="LibraryZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="PrefectureID" Type="int" Nullable="false" />
+          <Property Name="LibraryLocationURL" Type="nvarchar(max)" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vLibraryDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vLibraryDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+          <Property Name="LibraryInstitutionID" Type="int" />
+          <Property Name="LibraryName" Type="nvarchar" MaxLength="500" />
+          <Property Name="LibraryOpeningHours" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="LibraryPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="LibraryEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LibraryURL" Type="nvarchar" MaxLength="200" />
+          <Property Name="DirectorName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="LibraryAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="LibraryZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="LibraryCityID" Type="int" Nullable="false" />
+          <Property Name="LibraryPrefectureID" Type="int" Nullable="false" />
+          <Property Name="LibraryLocationURL" Type="nvarchar(max)" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vMinistryPaymentsUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vMinistryPaymentsUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="MinistryAuthorization" Type="int" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vPricingCommittee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vPricingCommittee">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="PricingCommitteeType" Type="nvarchar(max)" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="PricingCommitteeAuthorization" Type="int" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vPublicationsOffice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vPublicationsOffice">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="InstitutionID" Type="int" />
+          <Property Name="DirectorName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PublicationsOfficePhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="PublicationsOfficeEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="PublicationsOfficeAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PublicationsOfficeZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="PrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vPublicationsOfficeDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vPublicationsOfficeDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+          <Property Name="PublicationsOfficeInstitutionID" Type="int" />
+          <Property Name="PublicationsOfficePhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="PublicationsOfficeEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="DirectorName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PublicationsOfficeAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PublicationsOfficeZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="PublicationsOfficeCityID" Type="int" Nullable="false" />
+          <Property Name="PublicationsOfficePrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vPublisher' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vPublisher">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="PublisherType" Type="int" />
+          <Property Name="PublisherName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PublisherTradeName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PublisherAFM" Type="nvarchar" MaxLength="15" />
+          <Property Name="PublisherDOY" Type="nvarchar" MaxLength="256" />
+          <Property Name="PublisherPhone" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PublisherMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="PublisherFax" Type="nvarchar" MaxLength="100" />
+          <Property Name="PublisherEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="PublisherURL" Type="nvarchar" MaxLength="200" />
+          <Property Name="PublisherAddress" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="PublisherZipCode" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="PrefectureID" Type="int" Nullable="false" />
+          <Property Name="LegalPersonName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LegalPersonPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="LegalPersonEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="LegalPersonIdentificationType" Type="int" />
+          <Property Name="LegalPersonIdentificationNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="LegalPersonIdentificationIssuer" Type="nvarchar" MaxLength="200" />
+          <Property Name="LegalPersonIdentificationIssueDate" Type="datetime" />
+          <Property Name="SelfRepresented" Type="bit" />
+          <Property Name="SelfPublisherIdentificationType" Type="int" />
+          <Property Name="SelfPublisherIdentificationNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="SelfPublisherIdentificationIssuer" Type="nvarchar" MaxLength="200" />
+          <Property Name="SelfPublisherIdentificationIssueDate" Type="datetime" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactIdentificationType" Type="int" />
+          <Property Name="ContactIdentificationNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactIdentificationIssuer" Type="nvarchar" MaxLength="200" />
+          <Property Name="ContactIdentificationIssueDate" Type="datetime" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="UpdatedAt" Type="datetime" />
+          <Property Name="VerificationDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vRegisteredPublishers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vRegisteredPublishers">
+          <Key>
+            <PropertyRef Name="RegistrationDate" />
+            <PropertyRef Name="PublisherID" />
+            <PropertyRef Name="PublisherAddress" />
+            <PropertyRef Name="PublisherZipCode" />
+            <PropertyRef Name="PublisherCity" />
+            <PropertyRef Name="PublisherPrefecture" />
+          </Key>
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+          <Property Name="PublisherID" Type="int" Nullable="false" />
+          <Property Name="PublisherType" Type="int" />
+          <Property Name="PublisherName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PublisherTradeName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PublisherAFM" Type="nvarchar" MaxLength="15" />
+          <Property Name="PublisherAddress" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="PublisherZipCode" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PublisherCity" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PublisherPrefecture" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="LegalPersonName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LegalPersonPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="LegalPersonEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="HasLogisticBooks" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vSecretary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vSecretary">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="SecretaryAcademicID" Type="int" />
+          <Property Name="RepresentativeType" Type="int" Nullable="false" />
+          <Property Name="RepresentativeName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SecretaryPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SecretaryEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="SecretaryAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SecretaryZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SecretaryCityID" Type="int" Nullable="false" />
+          <Property Name="SecretaryPrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="Semesters" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsActivated" Type="bit" />
+          <Property Name="VerificationStatus" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Eudoxus-App.dbo.vSecretaryDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vSecretaryDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+          <Property Name="VerificationStatus" Type="int" />
+          <Property Name="VerificationDate" Type="datetime" />
+          <Property Name="SecretaryAcademicID" Type="int" />
+          <Property Name="SecretaryPhone" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SecretaryEmail" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="RepresentativeType" Type="int" Nullable="false" />
+          <Property Name="RepresentativeName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SecretaryAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SecretaryZipCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SecretaryCityID" Type="int" Nullable="false" />
+          <Property Name="SecretaryPrefectureID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactMobilePhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AlternateContactPhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactMobilePhone" Type="nvarchar" MaxLength="10" />
+          <Property Name="AlternateContactEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="Semesters" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Eudoxus.BusinessModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="HelpDeskViewsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vPublisher" EntityType="Eudoxus.BusinessModel.vPublisher" />
+          <EntitySet Name="vRegisteredPublishers" EntityType="Eudoxus.BusinessModel.RegisteredPublisherView" />
+          <EntitySet Name="vSecretaryDetails" EntityType="Eudoxus.BusinessModel.SecretaryDetailsView" />
+          <EntitySet Name="vSecretary" EntityType="Eudoxus.BusinessModel.vSecretary" />
+          <EntitySet Name="vDataCenterDetails" EntityType="Eudoxus.BusinessModel.DataCenterDetailsView" />
+          <EntitySet Name="vPublicationsOfficeDetails" EntityType="Eudoxus.BusinessModel.PublicationsOfficeDetailsView" />
+          <EntitySet Name="vDistributionPointDetails" EntityType="Eudoxus.BusinessModel.DistributionPointDetailsView" />
+          <EntitySet Name="vDataCenter" EntityType="Eudoxus.BusinessModel.vDataCenter" />
+          <EntitySet Name="vPublicationsOffice" EntityType="Eudoxus.BusinessModel.vPublicationsOffice" />
+          <EntitySet Name="vDistributionPoint" EntityType="Eudoxus.BusinessModel.vDistributionPoint" />
+          <EntitySet Name="vIncidentReportDetails" EntityType="Eudoxus.BusinessModel.IncidentReportDetailsView" />
+          <EntitySet Name="vLibrary" EntityType="Eudoxus.BusinessModel.vLibrary" />
+          <EntitySet Name="vLibraryDetails" EntityType="Eudoxus.BusinessModel.LibraryDetailsView" />
+          <EntitySet Name="vBookSupplier" EntityType="Eudoxus.BusinessModel.vBookSupplier" />
+          <EntitySet Name="vBookSupplierDetails" EntityType="Eudoxus.BusinessModel.BookSupplierDetailsView" />
+          <EntitySet Name="vPricingCommittee" EntityType="Eudoxus.BusinessModel.vPricingCommittee" />
+          <EntitySet Name="vMinistryPaymentsUser" EntityType="Eudoxus.BusinessModel.vMinistryPaymentsUser" />
+        </EntityContainer>
+        <EntityType Name="vPublisher">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="PublisherType" />
+          <Property Type="String" Name="PublisherName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherTradeName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherAFM" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherDOY" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherFax" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherURL" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" Nullable="false" />
+          <Property Type="Int32" Name="PrefectureID" Nullable="false" />
+          <Property Type="String" Name="LegalPersonName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LegalPersonPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LegalPersonEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LegalPersonIdentificationType" />
+          <Property Type="String" Name="LegalPersonIdentificationNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LegalPersonIdentificationIssuer" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LegalPersonIdentificationIssueDate" />
+          <Property Type="Boolean" Name="SelfRepresented" />
+          <Property Type="Int32" Name="SelfPublisherIdentificationType" />
+          <Property Type="String" Name="SelfPublisherIdentificationNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SelfPublisherIdentificationIssuer" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SelfPublisherIdentificationIssueDate" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ContactIdentificationType" />
+          <Property Type="String" Name="ContactIdentificationNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactIdentificationIssuer" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ContactIdentificationIssueDate" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActivated" />
+          <Property Type="Int32" Name="VerificationStatus" />
+          <Property Type="DateTime" Name="UpdatedAt" />
+          <Property Type="DateTime" Name="VerificationDate" />
+        </EntityType>
+        <EntityType Name="RegisteredPublisherView">
+          <Key>
+            <PropertyRef Name="RegistrationDate" />
+            <PropertyRef Name="PublisherAddress" />
+            <PropertyRef Name="PublisherZipCode" />
+            <PropertyRef Name="PublisherCity" />
+            <PropertyRef Name="PublisherPrefecture" />
+            <PropertyRef Name="PublisherID" />
+          </Key>
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" />
+          <Property Type="DateTime" Name="VerificationDate" />
+          <Property Type="Int32" Name="PublisherType" />
+          <Property Type="String" Name="PublisherName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherTradeName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherAFM" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherCity" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublisherPrefecture" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LegalPersonName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LegalPersonPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LegalPersonEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PublisherID" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="HasLogisticBooks" Nullable="true" />
+        </EntityType>
+        <EntityType Name="SecretaryDetailsView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatusInt" Nullable="false" />
+          <Property Type="DateTime" Name="VerificationDate" Nullable="true" />
+          <Property Type="Int32" Name="SecretaryAcademicID" Nullable="false" />
+          <Property Type="String" Name="SecretaryPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecretaryEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RepresentativeTypeInt" Nullable="false" />
+          <Property Type="String" Name="RepresentativeName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecretaryAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecretaryZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SecretaryCityID" Nullable="false" />
+          <Property Type="Int32" Name="SecretaryPrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="Int32" Name="Semesters" Nullable="false" />
+          
+        </EntityType>
+        <EntityType Name="vSecretary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="SecretaryAcademicID" />
+          <Property Type="Int32" Name="RepresentativeType" Nullable="false" />
+          <Property Type="String" Name="RepresentativeName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecretaryPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecretaryEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecretaryAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecretaryZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" Nullable="false" />
+          <Property Type="Int32" Name="PrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActivated" />
+          <Property Type="Int32" Name="VerificationStatus" />
+          <Property Type="Int32" Name="Semesters" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DataCenterDetailsView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatusInt" Nullable="false" />
+          <Property Type="DateTime" Name="VerificationDate" Nullable="true" />
+          <Property Type="Int32" Name="DataCenterInstitutionID" Nullable="false" />
+          <Property Type="String" Name="DataCenterPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DataCenterEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DirectorName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DataCenterAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DataCenterZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DataCenterCityID" Nullable="false" />
+          <Property Type="Int32" Name="DataCenterPrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+        </EntityType>
+        <EntityType Name="PublicationsOfficeDetailsView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatusInt" Nullable="false" />
+          <Property Type="DateTime" Name="VerificationDate" Nullable="true" />
+          <Property Type="Int32" Name="PublicationsOfficeInstitutionID" Nullable="false" />
+          <Property Type="String" Name="PublicationsOfficePhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublicationsOfficeEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DirectorName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublicationsOfficeAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublicationsOfficeZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PublicationsOfficeCityID" Nullable="false" />
+          <Property Type="Int32" Name="PublicationsOfficePrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+        </EntityType>
+        <EntityType Name="DistributionPointDetailsView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatusInt" Nullable="false" />
+          <Property Type="DateTime" Name="VerificationDate" Nullable="true" />
+          <Property Type="String" Name="DistributionPointName" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="DistributionPointOpeningHours" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="DistributionPointFax" Nullable="true" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="DistributionPointURL" Nullable="true" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DistributionPointCityID" Nullable="false" />
+          <Property Type="Int32" Name="DistributionPointPrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="DistributionPointLocationURL" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DistributionPointTypeInt" />
+          <Property Type="Int32" Name="DistributionPointInstitutionID" />
+        </EntityType>
+        <EntityType Name="vDataCenter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="InstitutionID" Nullable="false" />
+          <Property Type="String" Name="DirectorName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DataCenterPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DataCenterEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DataCenterAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DataCenterZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" Nullable="false" />
+          <Property Type="Int32" Name="PrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vPublicationsOffice">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="InstitutionID" Nullable="false" />
+          <Property Type="String" Name="DirectorName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="PublicationsOfficePhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublicationsOfficeEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublicationsOfficeAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PublicationsOfficeZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" Nullable="false" />
+          <Property Type="Int32" Name="PrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vDistributionPoint">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="DistributionPointName" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="DistributionPointOpeningHours" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="DistributionPointFax" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="DistributionPointEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistributionPointZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DistributionPointCityID" Nullable="false" />
+          <Property Type="Int32" Name="DistributionPointPrefectureID" Nullable="false" />
+          <Property Type="String" Name="DistributionPointLocationURL" Nullable="true" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" Nullable="false" />
+          <Property Type="Int32" Name="DistributionPointType" Nullable="false" />
+          <Property Type="Int32" Name="DistributionPointInstitutionID" Nullable="true" />
+        </EntityType>
+        <EntityType Name="IncidentReportDetailsView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IncidentCallType" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReporterType" MaxLength="31" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OnlineReport" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Type="String" Name="IncidentType" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ReportText" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="DateTime" Name="AnsweredAt" Nullable="true" />
+          <Property Type="String" Name="AnsweredBy" MaxLength="50" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AnswerCallType" MaxLength="11" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Type="String" Name="AnswerText" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="StudentInstitution" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StudentSchool" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StudentDepartment" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vLibrary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="InstitutionID" Nullable="false" />
+          <Property Type="String" Name="LibraryName" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="LibraryOpeningHours" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DirectorName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryURL" MaxLength="200" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="LibraryAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" Nullable="false" />
+          <Property Type="Int32" Name="PrefectureID" Nullable="false" />
+          <Property Type="String" Name="LibraryLocationURL" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LibraryDetailsView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatusInt" />
+          <Property Type="DateTime" Name="VerificationDate" />
+          <Property Type="Int32" Name="LibraryInstitutionID" Nullable="false" />
+          <Property Type="String" Name="LibraryName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryOpeningHours" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryPhone" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryEmail" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryURL" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DirectorName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LibraryZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LibraryCityID" Nullable="false" />
+          <Property Type="Int32" Name="LibraryPrefectureID" Nullable="false" />
+          <Property Type="String" Name="LibraryLocationURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vBookSupplier">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="InstitutionID" Nullable="false" />
+          <Property Type="Int32" Name="CertifierType" Nullable="false" />
+          <Property Type="String" Name="CertifierName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BookSupplierAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BookSupplierZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" Nullable="false" />
+          <Property Type="Int32" Name="PrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BookSupplierDetailsView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatusInt" Nullable="false" />
+          <Property Type="DateTime" Name="VerificationDate" Nullable="true" />
+          <Property Type="Int32" Name="BookSupplierInstitutionID" Nullable="false" />
+          <Property Type="Int32" Name="CertifierTypeInt" Nullable="false" />
+          <Property Type="String" Name="CertifierName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BookSupplierAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BookSupplierZipCode" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BookSupplierCityID" Nullable="false" />
+          <Property Type="Int32" Name="BookSupplierPrefectureID" Nullable="false" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactMobilePhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="AlternateContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactPhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactMobilePhone" MaxLength="10" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="AlternateContactEmail" MaxLength="256" FixedLength="false" Unicode="true" Nullable="true" />
+        </EntityType>
+        <EntityType Name="vPricingCommittee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="PricingCommitteeType" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Int32" Name="PricingCommitteeAuthorization" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" Nullable="false" />
+          <Property Type="DateTime" Name="VerificationDate" Nullable="true" />
+        </EntityType>
+        <EntityType Name="vMinistryPaymentsUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="String" Name="ContactName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactPhone" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Int32" Name="MinistryAuthorization" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+          <Property Type="Int32" Name="VerificationStatus" Nullable="false" />
+          <Property Type="DateTime" Name="VerificationDate" Nullable="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EudoxusBusinessModelStoreContainer" CdmEntityContainer="HelpDeskViewsEntities">
+          <EntitySetMapping Name="vPublisher">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vPublisher">
+              <MappingFragment StoreEntitySet="vPublisher">
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactIdentificationIssueDate" ColumnName="ContactIdentificationIssueDate" />
+                <ScalarProperty Name="ContactIdentificationIssuer" ColumnName="ContactIdentificationIssuer" />
+                <ScalarProperty Name="ContactIdentificationNumber" ColumnName="ContactIdentificationNumber" />
+                <ScalarProperty Name="ContactIdentificationType" ColumnName="ContactIdentificationType" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="SelfPublisherIdentificationIssueDate" ColumnName="SelfPublisherIdentificationIssueDate" />
+                <ScalarProperty Name="SelfPublisherIdentificationIssuer" ColumnName="SelfPublisherIdentificationIssuer" />
+                <ScalarProperty Name="SelfPublisherIdentificationNumber" ColumnName="SelfPublisherIdentificationNumber" />
+                <ScalarProperty Name="SelfPublisherIdentificationType" ColumnName="SelfPublisherIdentificationType" />
+                <ScalarProperty Name="SelfRepresented" ColumnName="SelfRepresented" />
+                <ScalarProperty Name="LegalPersonIdentificationIssueDate" ColumnName="LegalPersonIdentificationIssueDate" />
+                <ScalarProperty Name="LegalPersonIdentificationIssuer" ColumnName="LegalPersonIdentificationIssuer" />
+                <ScalarProperty Name="LegalPersonIdentificationNumber" ColumnName="LegalPersonIdentificationNumber" />
+                <ScalarProperty Name="LegalPersonIdentificationType" ColumnName="LegalPersonIdentificationType" />
+                <ScalarProperty Name="LegalPersonEmail" ColumnName="LegalPersonEmail" />
+                <ScalarProperty Name="LegalPersonPhone" ColumnName="LegalPersonPhone" />
+                <ScalarProperty Name="LegalPersonName" ColumnName="LegalPersonName" />
+                <ScalarProperty Name="PrefectureID" ColumnName="PrefectureID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="PublisherZipCode" ColumnName="PublisherZipCode" />
+                <ScalarProperty Name="PublisherAddress" ColumnName="PublisherAddress" />
+                <ScalarProperty Name="PublisherURL" ColumnName="PublisherURL" />
+                <ScalarProperty Name="PublisherEmail" ColumnName="PublisherEmail" />
+                <ScalarProperty Name="PublisherFax" ColumnName="PublisherFax" />
+                <ScalarProperty Name="PublisherMobilePhone" ColumnName="PublisherMobilePhone" />
+                <ScalarProperty Name="PublisherPhone" ColumnName="PublisherPhone" />
+                <ScalarProperty Name="PublisherDOY" ColumnName="PublisherDOY" />
+                <ScalarProperty Name="PublisherAFM" ColumnName="PublisherAFM" />
+                <ScalarProperty Name="PublisherTradeName" ColumnName="PublisherTradeName" />
+                <ScalarProperty Name="PublisherName" ColumnName="PublisherName" />
+                <ScalarProperty Name="PublisherType" ColumnName="PublisherType" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vRegisteredPublishers">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.RegisteredPublisherView">
+              <MappingFragment StoreEntitySet="vRegisteredPublishers">
+                <ScalarProperty Name="HasLogisticBooks" ColumnName="HasLogisticBooks" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="LegalPersonEmail" ColumnName="LegalPersonEmail" />
+                <ScalarProperty Name="LegalPersonPhone" ColumnName="LegalPersonPhone" />
+                <ScalarProperty Name="LegalPersonName" ColumnName="LegalPersonName" />
+                <ScalarProperty Name="PublisherPrefecture" ColumnName="PublisherPrefecture" />
+                <ScalarProperty Name="PublisherCity" ColumnName="PublisherCity" />
+                <ScalarProperty Name="PublisherZipCode" ColumnName="PublisherZipCode" />
+                <ScalarProperty Name="PublisherAddress" ColumnName="PublisherAddress" />
+                <ScalarProperty Name="PublisherAFM" ColumnName="PublisherAFM" />
+                <ScalarProperty Name="PublisherTradeName" ColumnName="PublisherTradeName" />
+                <ScalarProperty Name="PublisherName" ColumnName="PublisherName" />
+                <ScalarProperty Name="PublisherType" ColumnName="PublisherType" />
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vSecretaryDetails">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.SecretaryDetailsView">
+              <MappingFragment StoreEntitySet="vSecretaryDetails">
+                <ScalarProperty Name="Semesters" ColumnName="Semesters" />
+                <ScalarProperty Name="SecretaryPrefectureID" ColumnName="SecretaryPrefectureID" />
+                <ScalarProperty Name="SecretaryCityID" ColumnName="SecretaryCityID" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="SecretaryZipCode" ColumnName="SecretaryZipCode" />
+                <ScalarProperty Name="SecretaryAddress" ColumnName="SecretaryAddress" />
+                <ScalarProperty Name="RepresentativeName" ColumnName="RepresentativeName" />
+                <ScalarProperty Name="RepresentativeTypeInt" ColumnName="RepresentativeType" />
+                <ScalarProperty Name="SecretaryEmail" ColumnName="SecretaryEmail" />
+                <ScalarProperty Name="SecretaryPhone" ColumnName="SecretaryPhone" />
+                <ScalarProperty Name="SecretaryAcademicID" ColumnName="SecretaryAcademicID" />
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatusInt" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vSecretary">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vSecretary">
+              <MappingFragment StoreEntitySet="vSecretary">
+                <ScalarProperty Name="Semesters" ColumnName="Semesters" />
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="PrefectureID" ColumnName="SecretaryPrefectureID" />
+                <ScalarProperty Name="CityID" ColumnName="SecretaryCityID" />
+                <ScalarProperty Name="SecretaryZipCode" ColumnName="SecretaryZipCode" />
+                <ScalarProperty Name="SecretaryAddress" ColumnName="SecretaryAddress" />
+                <ScalarProperty Name="SecretaryEmail" ColumnName="SecretaryEmail" />
+                <ScalarProperty Name="SecretaryPhone" ColumnName="SecretaryPhone" />
+                <ScalarProperty Name="RepresentativeName" ColumnName="RepresentativeName" />
+                <ScalarProperty Name="RepresentativeType" ColumnName="RepresentativeType" />
+                <ScalarProperty Name="SecretaryAcademicID" ColumnName="SecretaryAcademicID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vDataCenterDetails">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.DataCenterDetailsView">
+              <MappingFragment StoreEntitySet="vDataCenterDetails">
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="DataCenterPrefectureID" ColumnName="DataCenterPrefectureID" />
+                <ScalarProperty Name="DataCenterCityID" ColumnName="DataCenterCityID" />
+                <ScalarProperty Name="DataCenterZipCode" ColumnName="DataCenterZipCode" />
+                <ScalarProperty Name="DataCenterAddress" ColumnName="DataCenterAddress" />
+                <ScalarProperty Name="DirectorName" ColumnName="DirectorName" />
+                <ScalarProperty Name="DataCenterEmail" ColumnName="DataCenterEmail" />
+                <ScalarProperty Name="DataCenterPhone" ColumnName="DataCenterPhone" />
+                <ScalarProperty Name="DataCenterInstitutionID" ColumnName="DataCenterInstitutionID" />
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatusInt" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vPublicationsOfficeDetails">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.PublicationsOfficeDetailsView">
+              <MappingFragment StoreEntitySet="vPublicationsOfficeDetails">
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="PublicationsOfficePrefectureID" ColumnName="PublicationsOfficePrefectureID" />
+                <ScalarProperty Name="PublicationsOfficeCityID" ColumnName="PublicationsOfficeCityID" />
+                <ScalarProperty Name="PublicationsOfficeZipCode" ColumnName="PublicationsOfficeZipCode" />
+                <ScalarProperty Name="PublicationsOfficeAddress" ColumnName="PublicationsOfficeAddress" />
+                <ScalarProperty Name="DirectorName" ColumnName="DirectorName" />
+                <ScalarProperty Name="PublicationsOfficeEmail" ColumnName="PublicationsOfficeEmail" />
+                <ScalarProperty Name="PublicationsOfficePhone" ColumnName="PublicationsOfficePhone" />
+                <ScalarProperty Name="PublicationsOfficeInstitutionID" ColumnName="PublicationsOfficeInstitutionID" />
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatusInt" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vDistributionPointDetails">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.DistributionPointDetailsView">
+              <MappingFragment StoreEntitySet="vDistributionPointDetails">
+                <ScalarProperty Name="DistributionPointInstitutionID" ColumnName="DistributionPointInstitutionID" />
+                <ScalarProperty Name="DistributionPointTypeInt" ColumnName="DistributionPointType" />
+                <ScalarProperty Name="DistributionPointLocationURL" ColumnName="DistributionPointLocationURL" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="DistributionPointPrefectureID" ColumnName="DistributionPointPrefectureID" />
+                <ScalarProperty Name="DistributionPointCityID" ColumnName="DistributionPointCityID" />
+                <ScalarProperty Name="DistributionPointZipCode" ColumnName="DistributionPointZipCode" />
+                <ScalarProperty Name="DistributionPointAddress" ColumnName="DistributionPointAddress" />
+                <ScalarProperty Name="DistributionPointURL" ColumnName="DistributionPointURL" />
+                <ScalarProperty Name="DistributionPointEmail" ColumnName="DistributionPointEmail" />
+                <ScalarProperty Name="DistributionPointFax" ColumnName="DistributionPointFax" />
+                <ScalarProperty Name="DistributionPointMobilePhone" ColumnName="DistributionPointMobilePhone" />
+                <ScalarProperty Name="DistributionPointPhone" ColumnName="DistributionPointPhone" />
+                <ScalarProperty Name="DistributionPointOpeningHours" ColumnName="DistributionPointOpeningHours" />
+                <ScalarProperty Name="DistributionPointName" ColumnName="DistributionPointName" />
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatusInt" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vDataCenter">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vDataCenter">
+              <MappingFragment StoreEntitySet="vDataCenter">
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="PrefectureID" ColumnName="PrefectureID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="DataCenterZipCode" ColumnName="DataCenterZipCode" />
+                <ScalarProperty Name="DataCenterAddress" ColumnName="DataCenterAddress" />
+                <ScalarProperty Name="DataCenterEmail" ColumnName="DataCenterEmail" />
+                <ScalarProperty Name="DataCenterPhone" ColumnName="DataCenterPhone" />
+                <ScalarProperty Name="DirectorName" ColumnName="DirectorName" />
+                <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vPublicationsOffice">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vPublicationsOffice">
+              <MappingFragment StoreEntitySet="vPublicationsOffice">
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="PrefectureID" ColumnName="PrefectureID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="PublicationsOfficeZipCode" ColumnName="PublicationsOfficeZipCode" />
+                <ScalarProperty Name="PublicationsOfficeAddress" ColumnName="PublicationsOfficeAddress" />
+                <ScalarProperty Name="PublicationsOfficeEmail" ColumnName="PublicationsOfficeEmail" />
+                <ScalarProperty Name="PublicationsOfficePhone" ColumnName="PublicationsOfficePhone" />
+                <ScalarProperty Name="DirectorName" ColumnName="DirectorName" />
+                <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vDistributionPoint">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vDistributionPoint">
+              <MappingFragment StoreEntitySet="vDistributionPoint">
+                <ScalarProperty Name="DistributionPointInstitutionID" ColumnName="DistributionPointInstitutionID" />
+                <ScalarProperty Name="DistributionPointType" ColumnName="DistributionPointType" />
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="DistributionPointLocationURL" ColumnName="DistributionPointLocationURL" />
+                <ScalarProperty Name="DistributionPointPrefectureID" ColumnName="DistributionPointPrefectureID" />
+                <ScalarProperty Name="DistributionPointCityID" ColumnName="DistributionPointCityID" />
+                <ScalarProperty Name="DistributionPointZipCode" ColumnName="DistributionPointZipCode" />
+                <ScalarProperty Name="DistributionPointAddress" ColumnName="DistributionPointAddress" />
+                <ScalarProperty Name="DistributionPointEmail" ColumnName="DistributionPointEmail" />
+                <ScalarProperty Name="DistributionPointFax" ColumnName="DistributionPointFax" />
+                <ScalarProperty Name="DistributionPointMobilePhone" ColumnName="DistributionPointMobilePhone" />
+                <ScalarProperty Name="DistributionPointPhone" ColumnName="DistributionPointPhone" />
+                <ScalarProperty Name="DistributionPointOpeningHours" ColumnName="DistributionPointOpeningHours" />
+                <ScalarProperty Name="DistributionPointName" ColumnName="DistributionPointName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vIncidentReportDetails">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.IncidentReportDetailsView">
+              <MappingFragment StoreEntitySet="vIncidentReportDetails">
+                <ScalarProperty Name="StudentDepartment" ColumnName="StudentDepartment" />
+                <ScalarProperty Name="StudentSchool" ColumnName="StudentSchool" />
+                <ScalarProperty Name="StudentInstitution" ColumnName="StudentInstitution" />
+                <ScalarProperty Name="AnswerText" ColumnName="AnswerText" />
+                <ScalarProperty Name="AnswerCallType" ColumnName="AnswerCallType" />
+                <ScalarProperty Name="AnsweredBy" ColumnName="AnsweredBy" />
+                <ScalarProperty Name="AnsweredAt" ColumnName="AnsweredAt" />
+                <ScalarProperty Name="ReportText" ColumnName="ReportText" />
+                <ScalarProperty Name="IncidentType" ColumnName="IncidentType" />
+                <ScalarProperty Name="OnlineReport" ColumnName="OnlineReport" />
+                <ScalarProperty Name="ReporterType" ColumnName="ReporterType" />
+                <ScalarProperty Name="IncidentCallType" ColumnName="IncidentCallType" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vLibrary">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vLibrary">
+              <MappingFragment StoreEntitySet="vLibrary">
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="LibraryLocationURL" ColumnName="LibraryLocationURL" />
+                <ScalarProperty Name="PrefectureID" ColumnName="PrefectureID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="LibraryZipCode" ColumnName="LibraryZipCode" />
+                <ScalarProperty Name="LibraryAddress" ColumnName="LibraryAddress" />
+                <ScalarProperty Name="LibraryURL" ColumnName="LibraryURL" />
+                <ScalarProperty Name="LibraryEmail" ColumnName="LibraryEmail" />
+                <ScalarProperty Name="LibraryPhone" ColumnName="LibraryPhone" />
+                <ScalarProperty Name="DirectorName" ColumnName="DirectorName" />
+                <ScalarProperty Name="LibraryOpeningHours" ColumnName="LibraryOpeningHours" />
+                <ScalarProperty Name="LibraryName" ColumnName="LibraryName" />
+                <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vLibraryDetails">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.LibraryDetailsView">
+              <MappingFragment StoreEntitySet="vLibraryDetails">
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="LibraryLocationURL" ColumnName="LibraryLocationURL" />
+                <ScalarProperty Name="LibraryPrefectureID" ColumnName="LibraryPrefectureID" />
+                <ScalarProperty Name="LibraryCityID" ColumnName="LibraryCityID" />
+                <ScalarProperty Name="LibraryZipCode" ColumnName="LibraryZipCode" />
+                <ScalarProperty Name="LibraryAddress" ColumnName="LibraryAddress" />
+                <ScalarProperty Name="DirectorName" ColumnName="DirectorName" />
+                <ScalarProperty Name="LibraryURL" ColumnName="LibraryURL" />
+                <ScalarProperty Name="LibraryEmail" ColumnName="LibraryEmail" />
+                <ScalarProperty Name="LibraryPhone" ColumnName="LibraryPhone" />
+                <ScalarProperty Name="LibraryOpeningHours" ColumnName="LibraryOpeningHours" />
+                <ScalarProperty Name="LibraryName" ColumnName="LibraryName" />
+                <ScalarProperty Name="LibraryInstitutionID" ColumnName="LibraryInstitutionID" />
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatusInt" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vBookSupplier">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vBookSupplier">
+              <MappingFragment StoreEntitySet="vBookSupplier">
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="PrefectureID" ColumnName="PrefectureID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="BookSupplierZipCode" ColumnName="BookSupplierZipCode" />
+                <ScalarProperty Name="BookSupplierAddress" ColumnName="BookSupplierAddress" />
+                <ScalarProperty Name="CertifierName" ColumnName="CertifierName" />
+                <ScalarProperty Name="CertifierType" ColumnName="CertifierType" />
+                <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vBookSupplierDetails">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.BookSupplierDetailsView">
+              <MappingFragment StoreEntitySet="vBookSupplierDetails">
+                <ScalarProperty Name="AlternateContactEmail" ColumnName="AlternateContactEmail" />
+                <ScalarProperty Name="AlternateContactMobilePhone" ColumnName="AlternateContactMobilePhone" />
+                <ScalarProperty Name="AlternateContactPhone" ColumnName="AlternateContactPhone" />
+                <ScalarProperty Name="AlternateContactName" ColumnName="AlternateContactName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="BookSupplierPrefectureID" ColumnName="BookSupplierPrefectureID" />
+                <ScalarProperty Name="BookSupplierCityID" ColumnName="BookSupplierCityID" />
+                <ScalarProperty Name="BookSupplierZipCode" ColumnName="BookSupplierZipCode" />
+                <ScalarProperty Name="BookSupplierAddress" ColumnName="BookSupplierAddress" />
+                <ScalarProperty Name="CertifierName" ColumnName="CertifierName" />
+                <ScalarProperty Name="CertifierTypeInt" ColumnName="CertifierType" />
+                <ScalarProperty Name="BookSupplierInstitutionID" ColumnName="BookSupplierInstitutionID" />
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatusInt" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vPricingCommittee">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vPricingCommittee">
+              <MappingFragment StoreEntitySet="vPricingCommittee">
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PricingCommitteeAuthorization" ColumnName="PricingCommitteeAuthorization" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="PricingCommitteeType" ColumnName="PricingCommitteeType" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vMinistryPaymentsUser">
+            <EntityTypeMapping TypeName="Eudoxus.BusinessModel.vMinistryPaymentsUser">
+              <MappingFragment StoreEntitySet="vMinistryPaymentsUser">
+                <ScalarProperty Name="VerificationDate" ColumnName="VerificationDate" />
+                <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MinistryAuthorization" ColumnName="MinistryAuthorization" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="HelpDeskViews" ZoomLevel="81">
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vPublisher" Width="2.25" PointX="0.625" PointY="6.75" Height="8.6592415364583317" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.RegisteredPublisherView" Width="2.375" PointX="0.5" PointY="0.75" Height="4.5505582682291656" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.SecretaryDetailsView" Width="2.125" PointX="7.375" PointY="0.75" Height="4.3862109375" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vSecretary" Width="2.125" PointX="3.625" PointY="6.75" Height="4.8792529296875" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.DataCenterDetailsView" Width="2.875" PointX="13.5" PointY="0.75" Height="4.2218636067708326" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.PublicationsOfficeDetailsView" Width="2.375" PointX="10.125" PointY="0.75" Height="4.2218636067708326" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.DistributionPointDetailsView" Width="3.25" PointX="19.75" PointY="0.75" Height="4.2218636067708326" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vDataCenter" Width="2.125" PointX="9.25" PointY="6.75" Height="4.7149055989583317" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vPublicationsOffice" Width="2.125" PointX="6.5" PointY="6.75" Height="4.7149055989583353" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vDistributionPoint" Width="2.25" PointX="14.5" PointY="6.75" Height="4.5505582682291674" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.IncidentReportDetailsView" Width="2.375" PointX="3.375" PointY="0.75" Height="2.9070849609375031" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vLibrary" Width="2" PointX="12" PointY="6.75" Height="5.3722949218750031" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.LibraryDetailsView" Width="2.125" PointX="17" PointY="0.75" Height="4.8792529296875031" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vBookSupplier" Width="3" PointX="17.375" PointY="6.75" Height="4.5505582682291656" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.BookSupplierDetailsView" Width="3.25" PointX="23.75" PointY="0.75" Height="4.0575162760416656" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vPricingCommittee" Width="2.5" PointX="21" PointY="6.75" Height="3.0714322916666656" />
+        <EntityTypeShape EntityType="Eudoxus.BusinessModel.vMinistryPaymentsUser" Width="2.25" PointX="24.125" PointY="6.75" Height="3.0714322916666674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

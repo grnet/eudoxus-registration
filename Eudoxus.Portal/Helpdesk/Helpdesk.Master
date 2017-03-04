@@ -1,0 +1,90 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="Eudoxus.Portal.Helpdesk.Helpdesk"
+    CodeBehind="Helpdesk.Master.cs" %>
+
+<%@ Register Assembly="DevExpress.Web.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dxm" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link id="lnkBackOffice" runat="server" href="~/_css/backOffice.css" type="text/css"
+        rel="stylesheet" rev="stylesheet" media="all" />
+    <link id="lnkMain" runat="server" href="~/_css/main.css" type="text/css" rel="stylesheet"
+        rev="stylesheet" media="all" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="expires" content="-1" />
+    <title>Γραφείο Αρωγής της δράσης «Εύδοξος»</title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager runat="server" ID="sm">
+        <CompositeScript>
+            <Scripts>
+                <asp:ScriptReference Path="~/_js/jquery.js" />
+                <asp:ScriptReference Path="~/_js/Imis.Lib.js" />
+                <asp:ScriptReference Path="~/_js/popUp1.js" />
+                <asp:ScriptReference Path="~/_js/SchoolSearch.js" />
+            </Scripts>
+        </CompositeScript>
+    </asp:ScriptManager>
+    <div id="boHeader">
+        <%--<a id="dg-logo" href="http://www.infosoc.gr" target="_blank">&nbsp;</a> <a id="destinpsifiaka-logo"
+            href="http://www.destinpsifiaka.gr/" target="_blank">&nbsp;</a>--%>
+        <div style="float: left; margin-top: 22px; font-family: Georgia,serif; font-size: 20px;">
+            Πληροφοριακό Σύστημα Υποστήριξης της δράσης «Εύδοξος»
+        </div>
+        <%-- User services --%>
+        <div id="boUserServices">
+            <table border="0">
+                <tr>
+                    <td>
+                        <asp:LoginName ID="LoginName1" runat="server" FormatString="Έχετε συνδεθει ως: [{0}]" />
+                    </td>
+                    <td>
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="Αποσύνδεση" LoginText="Είσοδος στο Πληροφοριακό σύστημα"
+                            OnLoggingOut="LoginStatus1_LoggingOut" CssClass="logout" />
+                        <asp:LoginView runat="server">
+                            <LoggedInTemplate>
+
+                                <script type="text/javascript">
+                                    $('.logout').click(function() {
+                                        Sys.Services.AuthenticationService.logout('/');
+                                        return false;
+                                    });
+                                </script>
+
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </td>
+                    <td>
+                        <a id="lnkChangePassword" runat="server" href="javascript:void(0);">Αλλαγή Κωδικού Πρόσβασης
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="clear: both;">
+        </div>
+    </div>
+    <div style="background-color: #eee; border-bottom: 1px solid #999">
+        <dxm:ASPxMenu runat="server" ID="dxNavigationMenu" DataSourceID="smdsHelpdesk" Border-BorderStyle="None" />
+    </div>
+    <asp:SiteMapDataSource runat="server" ID="smdsHelpdesk" ShowStartingNode="false"
+        SiteMapProvider="helpdesk" />
+    <dxpc:ASPxPopupControl runat="server" ID="dxpcPopup" AllowDragging="true" Height="300"
+        Width="700" Modal="true" PopupHorizontalAlign="WindowCenter" ClientInstanceName="devExPopup"
+        PopupVerticalAlign="WindowCenter" CloseAction="CloseButton">
+        <ClientSideEvents CloseUp="function(s,e){popUp.hide();}" />
+    </dxpc:ASPxPopupControl>
+    <div id="mainContent">
+        <%-- Page's main content --%>
+        <div id="boMain">
+            <asp:ContentPlaceHolder ID="cphMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

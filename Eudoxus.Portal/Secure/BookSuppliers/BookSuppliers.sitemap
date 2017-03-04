@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Secure/BookSuppliers" title="Default" roles="BookSupplierUser">
+        <siteMapNode url="~/Secure/BookSuppliers/Default.aspx" title="Κεντρική Σελίδα" />
+        <siteMapNode url="~/Secure/BookSuppliers/BookSupplierDetails.aspx" title="Στοιχεία Υπεύθυνου Παραγγελίας Βιβλίων" />
+        <siteMapNode url="~/Secure/BookSuppliers/HelpdeskContact.aspx" title="Επικοινωνία με Γραφείο Αρωγής" />
+    </siteMapNode>
+</siteMap>

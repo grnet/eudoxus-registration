@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Helpdesk/Default.aspx" title="HelpDesk" roles="Helpdesk, SuperHelpdesk, Supervisor">
+        <siteMapNode url="~/Helpdesk/SearchReporters.aspx" title="Αναφέροντες" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/SearchIncidentReports.aspx" title="Τηλεφωνικές Αναφορές" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/OnlineReports.aspx" title="Online Αναφορές" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyPublishers.aspx" title="Εκδότες" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifySecretaries.aspx" title="Γραμματείες" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyPublicationsOffices.aspx" title="Γραφεία Δημοσιευμάτων" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyDataCenters.aspx" title="Γραφεία Μηχανογράφησης" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyLibraries.aspx" title="Βιβλιοθήκες" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyDistributionPoints.aspx" title="Σημεία Διανομής" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyBookSuppliers.aspx" title="Υπεύθ. Παραγγελίας Βιβλίων" roles="Helpdesk, SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyPricingCommittees.aspx" title="Υπουργείο Κοστολόγηση" roles="SuperHelpdesk" />
+        <siteMapNode url="~/Helpdesk/VerifyMinistryPaymentsUsers.aspx" title="Υπουργείο Πληρωμές" roles="SuperHelpdesk" />
+        <!--<siteMapNode url="~/Helpdesk/SearchLessonReports.aspx" title="Καταχώριση Μαθημάτων" roles="Helpdesk, SuperHelpdesk" />-->
+        <siteMapNode url="~/Helpdesk/SearchSupervisorReports.aspx" title="Αναζήτηση Συμβάντων" roles="Supervisor" />
+        <siteMapNode url="~/Helpdesk/HelpdeskUsers.aspx" title="Χρήστες Helpdesk" roles="SuperHelpdesk" />
+	</siteMapNode>
+</siteMap>

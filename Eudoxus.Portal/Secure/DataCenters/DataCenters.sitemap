@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Secure/DataCenters" title="Default" roles="DataCenterUser">
+        <siteMapNode url="~/Secure/DataCenters/Default.aspx" title="Κεντρική Σελίδα" />
+        <siteMapNode url="~/Secure/DataCenters/DataCenterDetails.aspx" title="Στοιχεία Γραφείου" />
+        <siteMapNode url="~/Secure/DataCenters/HelpdeskContact.aspx" title="Επικοινωνία με Γραφείο Αρωγής" />
+    </siteMapNode>
+</siteMap>

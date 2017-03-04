@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Browse.master.cs" Inherits="Eudoxus.Portal.Browse.Browse" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link id="lnkMain" runat="server" href="~/_css/main.css" type="text/css" rel="stylesheet"
+        rev="stylesheet" media="all" />
+    <link id="lnkBrowse" runat="server" href="~/_css/portal.css" type="text/css" rel="stylesheet"
+        rev="stylesheet" media="all" />
+    <title>Browse</title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="padding: 5px; margin: 0;">
+    <form id="form1" runat="server">
+    <asp:ScriptManager runat="server" ID="sm">
+        <CompositeScript>
+            <Scripts>
+                <asp:ScriptReference Path="~/_js/jquery.js" />
+                <asp:ScriptReference Path="~/_js/Imis.Lib.js" />
+            </Scripts>
+        </CompositeScript>
+    </asp:ScriptManager>
+    <div>
+        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-2262707-22");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>
+
+</body>
+</html>

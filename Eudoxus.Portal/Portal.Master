@@ -1,0 +1,72 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="Eudoxus.Portal.Portal"
+    CodeBehind="Portal.Master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link id="lnkLogin" runat="server" href="~/_css/newLogin3.css" type="text/css" rel="stylesheet"
+        rev="stylesheet" media="all" />
+    <link id="lnkMain" runat="server" href="~/_css/main.css" type="text/css" rel="stylesheet"
+        rev="stylesheet" media="all" />
+    <link id="lnkRegisteredUsers" runat="server" href="~/_css/registeredUsers3.css" type="text/css" rel="stylesheet"
+        rev="stylesheet" media="all" />
+    <title>ΕΔΕΤ - Πληροφοριακό Σύστημα Υποστήριξης της δράσης «Εύδοξος»</title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="sm" runat="server">
+        <CompositeScript>
+            <Scripts>
+                <asp:ScriptReference Path="~/_js/jquery.js" />
+                <asp:ScriptReference Path="~/_js/Imis.Lib.js" />
+            </Scripts>
+        </CompositeScript>
+    </asp:ScriptManager>
+    <div id="header">
+        <div id="headerTitle">
+            Πληροφοριακό Σύστημα Υποστήριξης της δράσης «Εύδοξος»
+        </div>
+        <%--<a id="grnet-logo" href="http://www.grnet.gr" target="_blank">&nbsp;</a>--%>
+        <a id="evdoxos-logo" href="http://eudoxus.gr/" target="_blank">&nbsp;</a>
+    </div>
+    <div class="breadcrumb">
+        <span><a href="/Default.aspx" title="Αρχική Σελίδα" class="home hasImage">Αρχική Σελίδα</a></span>
+        <span class="bcSeparator">&nbsp;</span><span><a target="_blank" href="http://eudoxus.gr/FAQ.aspx" title="Συχνές Ερωτήσεις" class="faq hasImage">
+            Συχνές Ερωτήσεις</a></span><span class="bcSeparator">&nbsp;</span> <span><a runat="server"
+                href="http://eudoxus.gr/OnlineReport.aspx" title="Επικοινωνία" class="contact hasImage">
+                Επικοινωνία</a></span>
+    </div>
+    <div id="container">
+        <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+        <div style="clear: both">
+        </div>
+    </div>
+    <div id="footer">
+            <a href="http://www.minedu.gov.gr/" target="_blank"><img src="/_img/minedu2.png" border="0" height="60" /></a>
+            <a href="http://www.grnet.gr/" target="_blank"><img src="/_img/grnet_logo_1.png" alt="ΕΔΕΤ" /></a>
+            <a href="http://europa.eu/" target="_blank"><img src="/_img/ee_1.png" alt="Ευρωπαϊκή Ένωση" /></a>
+            <a href="http://www.digitalplan.gov.gr/portal/" target="_blank"><img src="/_img/psifiaki_ellada_1.png" alt="Ψηφιακή Σύγκλιση" /></a>
+            <a href="http://www.espa.gr/" target="_blank"><img src="/_img/espa_1.png" alt="ΕΣΠΑ" /></a>
+            <div style="clear:both"/>
+            <div style="text-align: center; font-weight: bold; font-size: 13px; color: Black">
+                Με τη συγχρηματοδότηση της Ελλάδας & της Ευρωπαϊκής Ένωσης
+            </div>
+    </div>    
+    </form>
+
+
+   <%-- <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-2262707-22");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>--%>
+
+</body>
+</html>

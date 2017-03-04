@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Publishers.Master.cs" Inherits="Eudoxus.Portal.Secure.Publishers.Publishers" %>
+
+<%@ Register Src="~/UserControls/LoginBar.ascx" TagName="LoginBar" TagPrefix="my" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link id="lnkPublishers" runat="server" href="~/_css/registeredUsers3.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+    <link id="lnkMain" runat="server" href="~/_css/main.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="expires" content="-1" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager runat="server" ID="sm">
+        <CompositeScript>
+            <Scripts>
+                <asp:ScriptReference Path="~/_js/Imis.Lib.js" />
+                <asp:ScriptReference Path="~/_js/popUp1.js" />
+                <asp:ScriptReference Path="~/_js/SchoolSearch.js" />
+            </Scripts>
+        </CompositeScript>
+    </asp:ScriptManager>
+
+    <script type="text/javascript">
+        function BeginRequestHandler1(sender, args) {
+            document.getElementById('mask').style.display = 'block';
+        }
+        function EndRequestHandler1(sender, args) {
+            document.getElementById('mask').style.display = 'none';
+        }
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler1);
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler1);
+    </script>
+
+    <div id="header">
+        <div id="headerTitle">
+            Πληροφοριακό Σύστημα Υποστήριξης της δράσης «Εύδοξος»
+        </div>
+        <%--<a id="dg-logo" href="http://www.infosoc.gr" target="_blank">&nbsp;</a>--%>
+        <a id="evdoxos-logo" href="http://www.eudoxus.gr/" target="_blank">&nbsp;</a>
+    </div>
+    <div id="container">
+        <div id="login-area">
+            <div>
+                <my:LoginBar ID="loginBar" runat="server" />
+            </div>
+            <div style="padding: 4px 0 2px 0; color: #555; font-weight: bold;">
+                <asp:Label runat="server" ID="lblPublisherName" EnableViewState="false" />
+            </div>
+        </div>
+        <asp:Repeater ID="repMenu" DataSourceID="siteMapDS" runat="server">
+            <HeaderTemplate>
+                <div id="registeredUsers-menu">
+            </HeaderTemplate>
+            <ItemTemplate>
+                <asp:HyperLink CssClass='<%# Container.DataItem == ((System.Web.SiteMapNode)Container.DataItem).Provider.CurrentNode ? "active" : "" %>'
+                    runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink></ItemTemplate>
+            <SeparatorTemplate>
+                <%# Separator(Container.ItemIndex) %></SeparatorTemplate>
+            <FooterTemplate>
+                </div></FooterTemplate>
+        </asp:Repeater>
+        <asp:SiteMapDataSource runat="server" SiteMapProvider="Publishers" ID="siteMapDS" ShowStartingNode="false" />
+        <h1>
+            <%= Page.Title %></h1>
+        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+        </asp:ContentPlaceHolder>
+        <div style="clear: both">
+        </div>
+    </div>
+    <div id="footer">
+            <a href="http://www.minedu.gov.gr/" target="_blank"><img src="/_img/minedu2.png" border="0" height="60" /></a>
+            <a href="http://www.grnet.gr/" target="_blank"><img src="/_img/grnet_logo_1.png" alt="ΕΔΕΤ" /></a>
+            <a href="http://europa.eu/" target="_blank"><img src="/_img/ee_1.png" alt="Ευρωπαϊκή Ένωση" /></a>
+            <a href="http://www.digitalplan.gov.gr/portal/" target="_blank"><img src="/_img/psifiaki_ellada_1.png" alt="Ψηφιακή Σύγκλιση" /></a>
+            <a href="http://www.espa.gr/" target="_blank"><img src="/_img/espa_1.png" alt="ΕΣΠΑ" /></a>
+            <div style="clear:both"/>
+            <div style="text-align: center; font-weight: bold; font-size: 13px; color: Black">
+                Με τη συγχρηματοδότηση της Ελλάδας & της Ευρωπαϊκής Ένωσης
+            </div>
+    </div>
+    <%--<div id="footer">
+        <div style="float: right; font-weight: bold">
+            Copyright &copy; 2010 - ΕΔΕΤ Α.Ε.</div>
+        <div style="clear: both">
+        </div>
+    </div>--%>
+    </form>
+</body>
+</html>
